@@ -428,6 +428,9 @@ h1 .accent::after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.
 }
 .final-core::before{content:"";position:absolute;inset:0;border-radius:inherit;
   background:radial-gradient(680px 340px at 50% -32%,rgba(255,255,255,.16),transparent 64%);pointer-events:none}
+.final-core .final-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.16}
+.final-core .final-scrim{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(160deg,rgba(24,24,30,.55) 20%,rgba(24,24,30,.15) 70%,rgba(24,24,30,.45))}
 .final-core h2{font-size:clamp(2.1rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1.16;margin-bottom:18px;position:relative}
 .final-core > p{color:rgba(255,255,255,.76);font-size:1.06rem;max-width:33em;margin:0 auto 44px;position:relative}
 .final-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
@@ -946,6 +949,8 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
   <div class="wrap">
     <div class="shell static rv">
       <div class="core final-core">
+        <img class="final-bg" src="images/design-tools.jpg" alt="" aria-hidden="true" decoding="async" />
+        <div class="final-scrim" aria-hidden="true"></div>
         <h2>꿈을 디자인하라</h2>
         <p>15년 이상 경력의 에듀플래너가 A부터 Z까지 한 번에 정리해 드립니다. 원하는 시간을 남겨주시면 저희가 먼저 전화드립니다.</p>
         <div class="final-ctas">
