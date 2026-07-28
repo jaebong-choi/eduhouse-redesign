@@ -1027,7 +1027,7 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
       </div>
       <div>
         <div class="chips rv" id="centerChips"></div>
-        <p class="centers-note rv">* 제안용 예시 데이터입니다. 실제 적용 시 센터별 주소·연락처 DB와 연동됩니다.</p>
+        <p class="centers-note rv">* 주소·연락처는 유학네트 공식 홈페이지의 국내 네트워크 정보를 기준으로 정리했습니다.</p>
       </div>
     </div>
   </div>
@@ -1253,24 +1253,24 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
 
   /* ---- centers data (제안용 예시) ---- */
   var centers = [
-    {n:"강남센터", en:"GANGNAM CENTER", addr:"서울특별시 강남구 테헤란로 4길 38-3, 다우빌딩 3층", way:"신분당선 강남역 3, 4번 출구에서 도보 5분", tel:"02-3481-1400"},
-    {n:"종로센터", en:"JONGRO CENTER", addr:"서울특별시 종로구 삼일대로 · 예시 주소", way:"1호선 종각역 인근", tel:"02-2263-1400"},
-    {n:"분당센터", en:"BUNDANG CENTER", addr:"경기도 성남시 분당구 · 예시 주소", way:"수인분당선 서현역 인근", tel:"031-708-1400"},
-    {n:"수원센터", en:"SUWON CENTER", addr:"경기도 수원시 팔달구 · 예시 주소", way:"1호선 수원역 인근", tel:"031-241-1400"},
-    {n:"플러스센터", en:"PLUS CENTER", addr:"서울특별시 · 예시 주소", way:"방문 전 전화 예약", tel:"02-538-1400"},
-    {n:"인천센터", en:"INCHEON CENTER", addr:"인천광역시 남동구 · 예시 주소", way:"인천1호선 예술회관역 인근", tel:"032-437-1400"},
-    {n:"송도센터", en:"SONGDO CENTER", addr:"인천광역시 연수구 송도동 · 예시 주소", way:"인천1호선 센트럴파크역 인근", tel:"032-831-1400"},
-    {n:"스마트센터", en:"SMART CENTER", addr:"온라인 전용 · 화상 상담", way:"전국 어디서나 비대면 상담", tel:"1588-1377"},
-    {n:"일산센터", en:"ILSAN CENTER", addr:"경기도 고양시 일산동구 · 예시 주소", way:"3호선 정발산역 인근", tel:"031-905-1400"},
-    {n:"원주센터", en:"WONJU CENTER", addr:"강원특별자치도 원주시 · 예시 주소", way:"원주 시외버스터미널 인근", tel:"033-745-1400"},
-    {n:"청주센터", en:"CHEONGJU CENTER", addr:"충청북도 청주시 상당구 · 예시 주소", way:"성안길 입구 인근", tel:"043-223-1400"},
-    {n:"대전센터", en:"DAEJEON CENTER", addr:"대전광역시 서구 둔산동 · 예시 주소", way:"시청역 인근", tel:"042-483-1400"},
-    {n:"세종센터", en:"SEJONG CENTER", addr:"세종특별자치시 · 예시 주소", way:"정부세종청사 인근", tel:"044-865-1400"},
-    {n:"천안센터", en:"CHEONAN CENTER", addr:"충청남도 천안시 동남구 · 예시 주소", way:"1호선 천안역 인근", tel:"041-563-1400"},
-    {n:"전주센터", en:"JEONJU CENTER", addr:"전북특별자치도 전주시 완산구 · 예시 주소", way:"전북대 구정문 인근", tel:"063-255-1400"},
-    {n:"광주센터", en:"GWANGJU CENTER", addr:"광주광역시 동구 · 예시 주소", way:"금남로4가역 인근", tel:"062-227-1400"},
-    {n:"대구센터", en:"DAEGU CENTER", addr:"대구광역시 중구 동성로 · 예시 주소", way:"2호선 반월당역 인근", tel:"053-423-1400"},
-    {n:"부산센터", en:"BUSAN CENTER", addr:"부산광역시 부산진구 서면 · 예시 주소", way:"1·2호선 서면역 인근", tel:"051-808-1400"}
+    {n:"강남센터", en:"GANGNAM CENTER", addr:"서울특별시 강남구 테헤란로 4길 38-3, 다우빌딩 3층", way:"신분당선 강남역 3·4번 출구에서 도보 5분", tel:"02-3481-1400"},
+    {n:"종로센터", en:"JONGRO CENTER", addr:"서울특별시 종로구 종로3길 17, D타워 LB218", way:"5호선 광화문역 3번 출구 옆 D타워 지하 연결 (도보 3분)", tel:"070-4148-8487"},
+    {n:"분당센터", en:"BUNDANG CENTER", addr:"경기도 성남시 분당구 황새울로312번길 20, 301호", way:"수인분당선 서현역 6번 출구, 교보문고와 국민은행 사이", tel:"031-702-3434"},
+    {n:"수원센터", en:"SUWON CENTER", addr:"경기도 수원시 영통구 대학3로4번길 15, 1층 112호", way:"신분당선 광교역 1번 출구에서 도보 5분", tel:"070-4148-8442"},
+    {n:"플러스센터", en:"PLUS CENTER", addr:"경기도 용인시 수지구 수지로342번길 34, 신촌빌딩 Space Us 415호", way:"수지구청역 4번 출구에서 도보 7분", tel:"031-607-7377"},
+    {n:"인천센터", en:"INCHEON CENTER", addr:"인천광역시 부평구 장제로 45, 현대 더 로프트 102동 203호", way:"1호선 부평역 1번 출구, 롯데마트 방면 도보 5분", tel:"032-612-3500"},
+    {n:"송도센터", en:"SONGDO CENTER", addr:"인천광역시 연수구 센트럴로 263, IBS타워 24층", way:"방문 전 전화 예약 권장", tel:"032-612-3500"},
+    {n:"스마트센터", en:"SMART CENTER", addr:"서울특별시 광진구 천호대로 536, 6층 613호", way:"5·7호선 군자역 8번 출구에서 도보 3분", tel:"070-4148-5540"},
+    {n:"일산센터", en:"ILSAN CENTER", addr:"경기도 고양시 일산동구 강석로 5, 화이트스톤 615호", way:"3호선 백석역 6번 출구, 화이트스톤 6층", tel:"031-917-7740"},
+    {n:"원주센터", en:"WONJU CENTER", addr:"강원특별자치도 원주시 시청로 80, 3층", way:"무실주공4단지 앞 신한은행 빌딩", tel:"033-748-7740"},
+    {n:"청주센터", en:"CHEONGJU CENTER", addr:"충청북도 청주시 서원구 사직대로 119, 2층", way:"사창사거리 하이마트 맞은편", tel:"043-276-9400"},
+    {n:"대전센터", en:"DAEJEON CENTER", addr:"대전광역시 유성구 대학로 88, 리더스빌딩 5층", way:"충남대학교 정문 앞", tel:"042-822-8227"},
+    {n:"세종센터", en:"SEJONG CENTER", addr:"세종특별자치시 한누리대로 249, 에스제이타워 7층 706호", way:"새롬·나성동 BRT 정류장에서 3분", tel:"044-862-8227"},
+    {n:"천안센터", en:"CHEONAN CENTER", addr:"충청남도 천안시 동남구 만남로 17, 덕영빌딩 3층", way:"천안고속터미널 옆", tel:"041-551-9090"},
+    {n:"전주센터", en:"JEONJU CENTER", addr:"전북특별자치도 전주시 덕진구 중동 778-2, 청강빌딩 404호", way:"전북혁신도시 알파문구 건물 4층", tel:"063-222-2080"},
+    {n:"광주센터", en:"GWANGJU CENTER", addr:"광주광역시 서구 상무중앙로 7, 5층", way:"상무역 4번 출구 스타벅스 건물", tel:"062-233-8171"},
+    {n:"대구센터", en:"DAEGU CENTER", addr:"대구광역시 중구 동성로3가 10-4, 맘스터치 건물 2층", way:"반월당역 14번·중앙로역 1번 출구에서 도보 3분", tel:"053-421-8001"},
+    {n:"부산센터", en:"BUSAN CENTER", addr:"부산광역시 해운대구 센텀6로 21, 인텔리움센텀 302호", way:"2호선 센텀시티역 4번 출구에서 도보 10분", tel:"051-809-8558"}
   ];
   var chipsWrap = document.getElementById("centerChips");
   centers.forEach(function(c, i){
