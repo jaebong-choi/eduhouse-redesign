@@ -214,7 +214,7 @@ h2.sec{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;letter-spacing:-.035em;l
   background-size:76px 76px;
   -webkit-mask-image:radial-gradient(780px 520px at 58% 8%,#000 25%,transparent 75%);
   mask-image:radial-gradient(780px 520px at 58% 8%,#000 25%,transparent 75%);}
-.hero .wrap{z-index:2}
+.hero .wrap{z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
 .hero-badge{
   display:inline-flex;align-items:center;gap:10px;
   background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.95);
@@ -227,9 +227,9 @@ h2.sec{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;letter-spacing:-.035em;l
 h1{font-size:clamp(3rem,7.2vw,5.9rem);font-weight:800;letter-spacing:-.05em;line-height:1.05;margin-bottom:32px}
 h1 .accent{color:var(--accent);position:relative;white-space:nowrap}
 h1 .accent::after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.03em;height:.16em;background:var(--accent-soft);z-index:-1;border-radius:6px}
-.hero-sub{font-size:clamp(1.05rem,1.6vw,1.26rem);color:var(--ink-2);max-width:38em;line-height:1.85;margin-bottom:48px}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:64px}
-.hero-trust{display:flex;gap:32px;flex-wrap:wrap}
+.hero-sub{font-size:clamp(1.05rem,1.6vw,1.26rem);color:var(--ink-2);max-width:38em;line-height:1.85;margin-bottom:44px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:36px}
+.hero-trust{display:flex;gap:32px;flex-wrap:wrap;justify-content:center}
 .hero-trust .t{display:flex;align-items:center;gap:9px;font-size:.88rem;color:var(--ink-2);font-weight:600}
 .hero .st{opacity:0;transform:translateY(30px);filter:blur(8px);animation:heroIn 1s var(--ease-out) forwards}
 .hero .st:nth-child(1){animation-delay:.05s}
@@ -244,7 +244,7 @@ a.hero-badge:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgba(22,22,28
 
 /* fair banner card */
 .hero-fair{
-  display:block;max-width:920px;margin-top:60px;border-radius:1.4rem;overflow:hidden;
+  display:block;max-width:920px;width:100%;margin:6px auto 56px;border-radius:1.4rem;overflow:hidden;
   border:1px solid var(--shell-line);
   box-shadow:0 3px 10px rgba(22,22,28,.08),0 26px 68px rgba(22,22,28,.16);
   transition:transform .5s var(--ease),box-shadow .5s var(--ease);
@@ -504,12 +504,12 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
 .cb-close:hover{color:#fff;background:rgba(255,255,255,.12)}
 
 /* ================= HERO GLOBE BACKDROP ================= */
-.hero-globe{position:absolute;top:48px;right:-150px;width:660px;aspect-ratio:3/2;z-index:1;opacity:.13;
+.hero-globe{position:absolute;top:70px;left:50%;transform:translateX(-50%);width:820px;max-width:92vw;aspect-ratio:3/2;z-index:1;opacity:.11;
   filter:grayscale(1);pointer-events:none;
   -webkit-mask-image:radial-gradient(68% 68% at 50% 50%,#000 38%,transparent 72%);
   mask-image:radial-gradient(68% 68% at 50% 50%,#000 38%,transparent 72%);}
 .hero-globe img{width:100%;height:100%;object-fit:cover}
-@media (max-width:1080px){.hero-globe{display:none}}
+@media (max-width:640px){.hero-globe{display:none}}
 @media (max-width:640px){.hero-sub br{display:none}}
 
 /* ================= THEME TOGGLE ================= */
@@ -653,6 +653,9 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
     <div class="st hero-badge"><span class="dot" aria-hidden="true"></span>공식 인증 전문 유학 기업</div>
     <h1 class="st">34년의 노하우로,<br /><span class="accent">당신의 유학</span>을 설계합니다</h1>
     <p class="st hero-sub">첫 상담에서 출국 후 현지 케어까지, 미국·캐나다·영국·호주 등 7개 지역.<br />전국 18개 센터의 에듀플래너가 함께합니다.</p>
+    <a class="st hero-fair" href="http://fair.eduhouse.net/" target="_blank" rel="noopener" aria-label="iTEF 유학네트 유학박람회 자세히 보기">
+      <img src="images/fair-banner.jpg" alt="iTEF 유학네트 유학박람회. 8월 22일 서울, 23일 청주, 28일 부산, 29일 대구. 장학금 최대 1억 원" decoding="async" />
+    </a>
     <div class="st hero-ctas">
       <a class="btn btn-primary" href="#consult">1:1 상담 예약하기
         <span class="orb"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
@@ -666,9 +669,6 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
       <div class="t"><svg width="17" height="17" viewBox="0 0 24 24" class="ico" style="color:#2fa76c" aria-hidden="true"><path d="M9 12.5l2 2 4.5-5.5"/><circle cx="12" cy="12" r="9.2"/></svg>스마트 안심유학 시스템</div>
       <div class="t"><svg width="17" height="17" viewBox="0 0 24 24" class="ico" style="color:#2fa76c" aria-hidden="true"><path d="M9 12.5l2 2 4.5-5.5"/><circle cx="12" cy="12" r="9.2"/></svg>대표상담 1588-1377</div>
     </div>
-    <a class="st hero-fair" href="http://fair.eduhouse.net/" target="_blank" rel="noopener" aria-label="iTEF 유학네트 유학박람회 자세히 보기">
-      <img src="images/fair-banner.jpg" alt="iTEF 유학네트 유학박람회. 8월 22일 서울, 23일 청주, 28일 부산, 29일 대구. 장학금 최대 1억 원" decoding="async" />
-    </a>
   </div>
 
   <!-- hero media marquee : 실제 학생·캠퍼스 사진 변경 예정 -->
