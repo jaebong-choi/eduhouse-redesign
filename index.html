@@ -280,9 +280,13 @@ a.hero-badge:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgba(22,22,28
   padding:68px 60px;display:grid;grid-template-columns:repeat(4,1fr);gap:44px;position:relative;
   box-shadow:inset 0 1px 1px rgba(255,255,255,.14);
 }
-.stats-core::before{content:"";position:absolute;inset:0;border-radius:inherit;
+.stats-core::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:2;
   background:radial-gradient(620px 300px at 90% -30%,rgba(255,255,255,.14),transparent 60%);pointer-events:none}
-.stat{border-left:1px solid rgba(255,255,255,.14);padding-left:30px}
+.stats-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.13;
+  filter:saturate(.7)}
+.stats-scrim{position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(120deg,rgba(28,28,36,.72) 18%,rgba(28,28,36,.34) 62%,rgba(28,28,36,.66))}
+.stat{position:relative;z-index:3;border-left:1px solid rgba(255,255,255,.14);padding-left:30px}
 .stat:first-child{border-left:none;padding-left:0}
 .stat .num{font-size:clamp(2.2rem,3.8vw,3.5rem);font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.08}
 .stat .num small{font-size:.48em;font-weight:700;margin-left:2px;color:rgba(255,255,255,.85)}
@@ -711,6 +715,8 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
   <div class="wrap">
     <div class="shell static rv" id="statsBox">
       <div class="core stats-core">
+        <img class="stats-bg" src="images/stats-bg.jpg" alt="" aria-hidden="true" decoding="async" />
+        <div class="stats-scrim" aria-hidden="true"></div>
         <div class="stat"><div class="num"><span data-count="34">0</span><small>년</small></div><div class="lab">유학 컨설팅 업력</div></div>
         <div class="stat"><div class="num"><span data-count="18">0</span><small>개</small></div><div class="lab">전국 유학센터</div></div>
         <div class="stat"><div class="num"><span data-count="137482">0</span><small>+</small></div><div class="lab">누적 수속 학생</div></div>
