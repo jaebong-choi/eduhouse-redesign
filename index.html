@@ -471,7 +471,28 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
 .foot .col h4{font-size:.78rem;font-weight:800;color:var(--ink-3);margin-bottom:16px}
 .foot .col a{display:block;font-size:.92rem;color:var(--ink-2);padding:4px 0;transition:color .3s}
 .foot .col a:hover{color:var(--accent-deep)}
-.foot-legal{margin-top:48px;padding-top:26px;border-top:1px solid rgba(33,33,41,.05);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.82rem;color:var(--ink-3)}
+.foot-legal{margin-top:48px;padding-top:26px;border-top:1px solid rgba(33,33,41,.05);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--ink-2)}
+.foot-links a{font-weight:600;margin-right:18px}
+.foot-links a:hover{color:var(--accent-deep)}
+.foot-sns{display:flex;gap:8px;align-items:center}
+.sns{width:36px;height:36px;border-radius:999px;display:grid;place-items:center;
+  background:var(--bg);border:1px solid var(--shell-line);color:var(--ink-2);
+  font-weight:800;font-size:.85rem;line-height:1;
+  transition:color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease)}
+.sns:hover{color:var(--accent-deep);border-color:rgba(224,74,66,.45);transform:translateY(-2px)}
+.sns:active{transform:scale(.95)}
+.airc{height:22px;width:auto;margin-left:8px;opacity:.9}
+.foot-biz{margin-top:20px;font-size:.8rem;color:var(--ink-3);line-height:2}
+.foot-biz .sep{margin:0 8px;opacity:.4}
+.foot-biz a{text-decoration:underline;text-underline-offset:2px}
+.foot-biz a:hover{color:var(--accent-deep)}
+.foot-awards{margin-top:26px;padding-top:24px;border-top:1px solid rgba(33,33,41,.05)}
+.awards-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.awards-scroll img{height:36px;width:auto;max-width:none;opacity:.92}
+:root[data-theme="dark"] .awards-scroll img{background:#fff;padding:8px 12px;border-radius:12px;box-sizing:content-box}
+:root[data-theme="dark"] .airc{background:#fff;padding:4px 7px;border-radius:7px;box-sizing:content-box}
+:root[data-theme="dark"] .foot-awards,
+:root[data-theme="dark"] .foot-legal{border-top-color:rgba(255,255,255,.07)}
 .foot-legal a{font-weight:600;margin-right:18px}
 .foot-legal a:hover{color:var(--accent-deep)}
 
@@ -703,11 +724,11 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
       <div class="awards-row">
         <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>공식 인증 유학 기업</span>
         <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>34th Anniversary</span>
-        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>수상 이력 로고 자리</span>
-        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>협회 멤버십 로고 자리</span>
-        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>언론 보도 로고 자리</span>
+        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>2015 STM Star Awards 수상</span>
+        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>대한민국 교육브랜드 유학부문 대상</span>
+        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>여성가족부 가족친화기업 인증</span>
       </div>
-      <p class="awards-note">* 수상·인증·멤버십 로고를 전달해 주시면 이 자리에 로고 스트립으로 배치됩니다 · 통계 수치는 제안용 예시입니다.</p>
+      <p class="awards-note">* 통계 수치는 제안용 예시입니다 · 수상·인증 로고 원본은 페이지 하단에 있습니다.</p>
     </div>
   </div>
 </section>
@@ -1046,7 +1067,7 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
           <a class="btn btn-white" href="https://www.eduhouse.net/members/member_info_write.asp">1:1 상담 예약하기
             <span class="orb"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
           </a>
-          <a class="btn btn-kakao" href="https://pf.kakao.com/" target="_blank" rel="noopener">
+          <a class="btn btn-kakao" href="https://pf.kakao.com/_kusYT" target="_blank" rel="noopener">
             <svg width="19" height="19" viewBox="0 0 24 24" fill="#191600" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 2.6 1.7 4.9 4.3 6.2l-.9 3.4c-.1.3.3.6.5.4l4-2.7c.4 0 .8.1 1.3.1 5.1 0 9.2-3.3 9.2-7.4S17.1 3 12 3Z"/></svg>
             카톡 상담
           </a>
@@ -1088,11 +1109,30 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
     </div>
   </div>
   <div class="wrap foot-legal">
-    <div>
+    <div class="foot-links">
+      <a href="https://www.eduhouse.net/members/svc_agreement.asp"><b>개인정보 처리방침</b></a>
       <a href="https://www.eduhouse.net/members/svc_agreement.asp">이용약관</a>
-      <a href="https://www.eduhouse.net/members/svc_agreement.asp"><b>개인정보처리방침</b></a>
+      <a href="https://www.eduhouse.net/members/customer_inquiry.asp">고객센터</a>
+      <a href="http://ir.eduhouse.net/">회사소개</a>
+      <a href="mailto:info@EduHouse.net">제휴문의</a>
     </div>
-    <div>© 1992-2026 EDUHOUSE Co., Ltd. · 리디자인 시안 (제안용)</div>
+    <div class="foot-sns">
+      <a class="sns" href="https://m.blog.naver.com/iaeedu/" target="_blank" rel="noopener" aria-label="네이버 블로그">b</a>
+      <a class="sns" href="https://www.facebook.com/iaeedu2" target="_blank" rel="noopener" aria-label="페이스북"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.4h2.5l.4-2.9h-2.9V8.8c0-.84.23-1.41 1.44-1.41h1.54V4.8c-.27-.04-1.18-.11-2.24-.11-2.22 0-3.74 1.35-3.74 3.84v2.14H8v2.9h2.5V21h3Z"/></svg></a>
+      <a class="sns" href="https://www.instagram.com/eduhouse_official/" target="_blank" rel="noopener" aria-label="인스타그램"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></a>
+      <a class="sns" href="https://pf.kakao.com/_kusYT" target="_blank" rel="noopener" aria-label="카카오톡 채널"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 2.6 1.7 4.9 4.3 6.2l-.9 3.4c-.1.3.3.6.5.4l4-2.7c.4 0 .8.1 1.3.1 5.1 0 9.2-3.3 9.2-7.4S17.1 3 12 3Z"/></svg></a>
+      <a class="sns" href="https://story.kakao.com/ch/eduhouse" target="_blank" rel="noopener" aria-label="카카오스토리">s</a>
+      <img class="airc" src="images/airc.png" alt="AIRC (American International Recruitment Council) 인증" loading="lazy" />
+    </div>
+  </div>
+  <div class="wrap foot-biz">
+    사업자등록번호 : 214-86-09356 <span class="sep">|</span> 법인명 : 에듀하우스㈜ <span class="sep">|</span> 대표이사 : 김옥중<br />
+    본사 : (06233) 서울특별시 강남구 강남대로 84길 23, 한라클래식 1205호<br />
+    고객센터 : 1588-1377 <span class="sep">|</span> 팩스 : 02-3482-2951 <span class="sep">|</span> 이메일 : <a href="mailto:info@EduHouse.net">info@EduHouse.net</a> <span class="sep">|</span> 개인정보보호책임자 : 김현진<br />
+    Copyright 2026 에듀하우스(주). All Rights Reserved. <span class="sep">|</span> 리디자인 시안 (제안용)
+  </div>
+  <div class="wrap foot-awards">
+    <div class="awards-scroll"><img src="images/prize.png" alt="수상 경력: 2015 STM Star Awards 아시아 스타 유학회사상, 2013 브랜드주가지수 1위, 2013 대한민국 교육경영 대상, 취업하고 싶은 500대 강소기업, 여성가족부 가족친화우수기업 인증, 2010 대한민국 교육브랜드 유학부문 대상, 2007 대한민국 대표브랜드 유학부문 대상, ICEF 교육박람회 국제컨설팅" loading="lazy" /></div>
   </div>
 </footer>
 
@@ -1100,7 +1140,7 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
 <div class="consult-bar" id="consultBar" role="complementary" aria-label="빠른 상담">
   <span class="cb-label">유학 고민, 지금 바로</span>
   <a class="cb-tel" href="tel:15881377"><svg width="14" height="14" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>1588-1377</a>
-  <a class="cb-kakao" href="https://pf.kakao.com/" target="_blank" rel="noopener" aria-label="카카오톡 상담">
+  <a class="cb-kakao" href="https://pf.kakao.com/_kusYT" target="_blank" rel="noopener" aria-label="카카오톡 상담">
     <svg width="19" height="19" viewBox="0 0 24 24" fill="#191600" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 2.6 1.7 4.9 4.3 6.2l-.9 3.4c-.1.3.3.6.5.4l4-2.7c.4 0 .8.1 1.3.1 5.1 0 9.2-3.3 9.2-7.4S17.1 3 12 3Z"/></svg>
   </a>
   <a class="cb-book" href="#consult">1:1 상담 예약</a>
