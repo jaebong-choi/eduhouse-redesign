@@ -203,7 +203,7 @@ h2.sec{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;letter-spacing:-.035em;l
 }
 
 /* ================= HERO ================= */
-.hero{position:relative;padding:216px 0 20px;overflow:hidden}
+.hero{position:relative;padding:164px 0 16px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;
   background:
     radial-gradient(1000px 560px at 84% -12%,rgba(224,74,66,.09),transparent 62%),
@@ -220,15 +220,15 @@ h2.sec{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;letter-spacing:-.035em;l
   background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.95);
   -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   padding:8px 18px;border-radius:999px;font-size:.84rem;font-weight:600;color:var(--ink-2);
-  box-shadow:0 1px 2px rgba(22,22,28,.06),0 8px 24px rgba(22,22,28,.06);margin-bottom:38px;
+  box-shadow:0 1px 2px rgba(22,22,28,.06),0 8px 24px rgba(22,22,28,.06);margin-bottom:30px;
 }
 .hero-badge b{color:var(--accent-deep);font-weight:800}
 .hero-badge .dot{width:6px;height:6px;border-radius:99px;background:#2fa76c;box-shadow:0 0 0 3px rgba(47,167,108,.15)}
-h1{font-size:clamp(3rem,7.2vw,5.9rem);font-weight:800;letter-spacing:-.05em;line-height:1.05;margin-bottom:32px}
+h1{font-size:clamp(2.8rem,6vw,5.2rem);font-weight:800;letter-spacing:-.05em;line-height:1.06;margin-bottom:26px}
 h1 .accent{color:var(--accent);position:relative;white-space:nowrap}
 h1 .accent::after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.03em;height:.16em;background:var(--accent-soft);z-index:-1;border-radius:6px}
-.hero-sub{font-size:clamp(1.05rem,1.6vw,1.26rem);color:var(--ink-2);max-width:38em;line-height:1.85;margin-bottom:44px}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:36px}
+.hero-sub{font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--ink-2);max-width:38em;line-height:1.8;margin-bottom:38px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:38px}
 .hero-trust{display:flex;gap:32px;flex-wrap:wrap;justify-content:center}
 .hero-trust .t{display:flex;align-items:center;gap:9px;font-size:.88rem;color:var(--ink-2);font-weight:600}
 .hero .st{opacity:0;transform:translateY(30px);filter:blur(8px);animation:heroIn 1s var(--ease-out) forwards}
@@ -244,7 +244,7 @@ a.hero-badge:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgba(22,22,28
 
 /* fair banner card */
 .hero-fair{
-  display:block;max-width:920px;width:100%;margin:6px auto 56px;border-radius:1.4rem;overflow:hidden;
+  display:block;max-width:660px;width:100%;margin:0 auto;border-radius:1.4rem;overflow:hidden;
   border:1px solid var(--shell-line);
   box-shadow:0 3px 10px rgba(22,22,28,.08),0 26px 68px rgba(22,22,28,.16);
   transition:transform .5s var(--ease),box-shadow .5s var(--ease);
@@ -674,12 +674,10 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
 <!-- ============ HERO ============ -->
 <section class="hero" aria-label="소개">
   <div class="hero-bg" aria-hidden="true"></div>
-  <div class="hero-lines" aria-hidden="true"></div>
-  <div class="hero-globe" aria-hidden="true"><img src="images/globe.jpg" alt="" decoding="async" /></div>
   <div class="wrap">
     <div class="st hero-badge"><span class="dot" aria-hidden="true"></span>공식 인증 전문 유학 기업</div>
-    <h1 class="st">34년의 노하우로,<br /><span class="accent">당신의 유학</span>을 설계합니다</h1>
-    <p class="st hero-sub">첫 상담에서 출국 후 현지 케어까지, 미국·캐나다·영국·호주 등 7개 지역.<br />전국 18개 센터의 에듀플래너가 함께합니다.</p>
+    <h1 class="st">유학은 용기가 아니라,<br /><span class="accent">설계</span>입니다</h1>
+    <p class="st hero-sub">34년의 노하우, 전국 18개 센터. 상담부터 출국 후 현지 케어까지 함께합니다.</p>
     <a class="st hero-fair" href="http://fair.eduhouse.net/" target="_blank" rel="noopener" aria-label="iTEF 유학네트 유학박람회 자세히 보기">
       <img src="images/fair-banner.jpg" alt="iTEF 유학네트 유학박람회. 8월 22일 서울, 23일 청주, 28일 부산, 29일 대구. 장학금 최대 1억 원" decoding="async" />
     </a>
@@ -690,11 +688,6 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
       <a class="btn btn-ghost" href="#diagnosis">3분 AI 자가진단
         <span class="orb"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
-    </div>
-    <div class="st hero-trust">
-      <div class="t"><svg width="17" height="17" viewBox="0 0 24 24" class="ico" style="color:#2fa76c" aria-hidden="true"><path d="M9 12.5l2 2 4.5-5.5"/><circle cx="12" cy="12" r="9.2"/></svg>공식 인증 유학 기업</div>
-      <div class="t"><svg width="17" height="17" viewBox="0 0 24 24" class="ico" style="color:#2fa76c" aria-hidden="true"><path d="M9 12.5l2 2 4.5-5.5"/><circle cx="12" cy="12" r="9.2"/></svg>스마트 안심유학 시스템</div>
-      <div class="t"><svg width="17" height="17" viewBox="0 0 24 24" class="ico" style="color:#2fa76c" aria-hidden="true"><path d="M9 12.5l2 2 4.5-5.5"/><circle cx="12" cy="12" r="9.2"/></svg>대표상담 1588-1377</div>
     </div>
   </div>
 
