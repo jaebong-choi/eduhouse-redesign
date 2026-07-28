@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>유학네트 — 34년의 노하우로 당신의 유학을 설계합니다</title>
+<meta name="description" content="공식 인증 전문 유학 기업 유학네트. 미국·캐나다·영국·호주·뉴질랜드·필리핀·유럽 7개 지역 어학연수와 대학 진학, 3분 AI 자가진단부터 출국 후 케어까지." />
+<meta property="og:title" content="유학네트 — 꿈을 디자인하라" />
+<meta property="og:description" content="34년 노하우, 전국 18개 센터. 진단에서 시작하는 유학 설계." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23163a8f'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>유</text></svg>" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<style>
+:root{
+  --bg:#f6f7fa;
+  --surface:#ffffff;
+  --shell:rgba(14,26,51,.035);
+  --shell-line:rgba(14,26,51,.07);
+  --ink:#0d1830;
+  --ink-2:#46536e;
+  --ink-3:#8391ab;
+  --accent:#1c4fd6;
+  --accent-deep:#122f85;
+  --accent-soft:#e9effc;
+  --red:#e8503f;
+  --kakao:#fee500;
+  --shadow-float:0 1px 2px rgba(18,49,136,.04),0 8px 24px rgba(18,49,136,.05),0 32px 80px rgba(18,49,136,.07);
+  --shadow-hover:0 2px 4px rgba(18,49,136,.05),0 16px 40px rgba(18,49,136,.09),0 48px 120px rgba(18,49,136,.10);
+  --r-shell:2rem;
+  --r-core:calc(2rem - .5rem);
+  --ease:cubic-bezier(.32,.72,0,1);
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --z-nav:80; --z-menu:90; --z-bar:85; --z-grain:70;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:var(--bg);color:var(--ink);
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+::selection{background:var(--accent);color:#fff}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+h1,h2,h3{text-wrap:balance}
+p{text-wrap:pretty}
+button{font-family:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid rgba(28,79,214,.4);outline-offset:3px;border-radius:8px}
+
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 18px;border-radius:0 0 12px 0;z-index:999}
+.skip:focus{left:0}
+
+/* grain — fixed, pointer-events none */
+.grain{position:fixed;inset:0;pointer-events:none;z-index:var(--z-grain);opacity:.4;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .025 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* ================= FLUID ISLAND NAV ================= */
+.island{
+  position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:var(--z-nav);
+  display:flex;align-items:center;gap:4px;
+  background:rgba(255,255,255,.72);
+  -webkit-backdrop-filter:saturate(1.8) blur(20px);backdrop-filter:saturate(1.8) blur(20px);
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:0 1px 1px rgba(18,49,136,.04),0 12px 32px rgba(18,49,136,.10),inset 0 1px 1px rgba(255,255,255,.8);
+  border-radius:999px;padding:8px 10px 8px 22px;
+  max-width:min(1080px,calc(100vw - 32px));
+}
+.island .brand{display:flex;align-items:center;margin-right:16px;flex:none}
+.island .brand img{height:19px;width:auto;mix-blend-mode:multiply}
+.island nav{display:flex;gap:2px}
+.island nav a{
+  font-size:.88rem;font-weight:600;color:var(--ink-2);padding:9px 14px;border-radius:999px;white-space:nowrap;
+  transition:color .35s var(--ease),background .35s var(--ease);
+}
+.island nav a:hover{color:var(--ink);background:rgba(14,26,51,.05)}
+.island nav a.active{color:var(--accent-deep);background:var(--accent-soft)}
+.island .nav-cta{
+  margin-left:12px;display:inline-flex;align-items:center;gap:10px;
+  background:var(--ink);color:#fff;font-size:.86rem;font-weight:700;
+  padding:6px 6px 6px 18px;border-radius:999px;white-space:nowrap;
+  transition:background .4s var(--ease),transform .4s var(--ease);
+}
+.island .nav-cta .orb{width:28px;height:28px;border-radius:999px;background:rgba(255,255,255,.16);display:grid;place-items:center;
+  transition:transform .4s var(--ease),background .4s var(--ease)}
+.island .nav-cta:hover{background:var(--accent-deep)}
+.island .nav-cta:hover .orb{transform:translate(2px,-1px) scale(1.05);background:rgba(255,255,255,.24)}
+.island .nav-cta:active{transform:scale(.97)}
+/* hamburger */
+.burger{display:none;position:relative;width:40px;height:40px;border:none;background:rgba(14,26,51,.05);border-radius:999px;cursor:pointer;flex:none}
+.burger span{position:absolute;left:12px;right:12px;height:1.6px;background:var(--ink);border-radius:2px;
+  transition:transform .5s var(--ease);}
+.burger span:nth-child(1){top:15px}
+.burger span:nth-child(2){top:23px}
+.burger.open span:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.burger.open span:nth-child(2){transform:translateY(-4px) rotate(-45deg)}
+/* fullscreen menu */
+.menu{
+  position:fixed;inset:0;z-index:var(--z-menu);
+  background:rgba(248,249,252,.86);
+  -webkit-backdrop-filter:blur(32px) saturate(1.6);backdrop-filter:blur(32px) saturate(1.6);
+  display:flex;flex-direction:column;justify-content:center;padding:0 9vw;
+  opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s;
+}
+.menu.open{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
+.menu a{
+  font-size:clamp(1.9rem,6.4vw,3.2rem);font-weight:800;letter-spacing:-.035em;line-height:1.32;color:var(--ink);
+  opacity:0;transform:translateY(48px);
+  transition:opacity .7s var(--ease-out),transform .7s var(--ease-out),color .3s;
+  width:max-content;
+}
+.menu a:hover{color:var(--accent)}
+.menu.open a{opacity:1;transform:none}
+.menu.open a:nth-child(1){transition-delay:.08s}
+.menu.open a:nth-child(2){transition-delay:.14s}
+.menu.open a:nth-child(3){transition-delay:.20s}
+.menu.open a:nth-child(4){transition-delay:.26s}
+.menu.open a:nth-child(5){transition-delay:.32s}
+.menu.open a:nth-child(6){transition-delay:.38s}
+.menu .menu-foot{margin-top:8vh;font-size:.9rem;color:var(--ink-3);opacity:0;transition:opacity .7s .45s var(--ease-out)}
+.menu.open .menu-foot{opacity:1}
+
+/* ================= PRIMITIVES ================= */
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px;position:relative}
+section{padding:130px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--shell-line);border-radius:999px;padding:7px 16px;margin-bottom:26px;
+  box-shadow:0 1px 2px rgba(18,49,136,.05);
+}
+.eyebrow::before{content:"";width:5px;height:5px;border-radius:99px;background:var(--red)}
+h2.sec{font-size:clamp(2rem,3.6vw,3rem);font-weight:800;letter-spacing:-.035em;line-height:1.18;margin-bottom:18px}
+.sec-sub{font-size:1.06rem;color:var(--ink-2);max-width:34em;line-height:1.8}
+
+/* double-bezel shell */
+.shell{
+  display:block;
+  background:var(--shell);border:1px solid var(--shell-line);border-radius:var(--r-shell);padding:.5rem;
+  transition:transform .7s var(--ease),box-shadow .7s var(--ease);
+}
+.core{
+  background:var(--surface);border-radius:var(--r-core);
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.9),0 1px 2px rgba(18,49,136,.04);
+  overflow:hidden;height:100%;
+}
+.shell:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}
+.shell.static:hover{transform:none;box-shadow:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;cursor:pointer;border:none;border-radius:999px;font-weight:700;
+  transition:transform .45s var(--ease),box-shadow .45s var(--ease),background .45s var(--ease),color .45s var(--ease);}
+.btn:active{transform:scale(.98)}
+.btn-primary{
+  background:var(--accent);color:#fff;font-size:1rem;gap:14px;
+  padding:8px 8px 8px 28px;
+  box-shadow:0 2px 6px rgba(28,79,214,.25),0 12px 32px rgba(28,79,214,.28);
+}
+.btn-primary .orb{
+  width:40px;height:40px;border-radius:999px;background:rgba(255,255,255,.18);display:grid;place-items:center;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.25);
+  transition:transform .45s var(--ease),background .45s var(--ease);
+}
+.btn-primary:hover{background:var(--accent-deep);transform:translateY(-2px);box-shadow:0 4px 10px rgba(18,47,133,.3),0 20px 48px rgba(18,47,133,.35)}
+.btn-primary:hover .orb{transform:translate(2px,-1px) scale(1.06);background:rgba(255,255,255,.26)}
+.btn-ghost{
+  background:rgba(255,255,255,.7);color:var(--ink);font-size:1rem;gap:14px;
+  padding:8px 8px 8px 28px;border:1px solid var(--shell-line);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  box-shadow:0 1px 2px rgba(18,49,136,.05);
+}
+.btn-ghost .orb{width:40px;height:40px;border-radius:999px;background:rgba(14,26,51,.06);display:grid;place-items:center;
+  transition:transform .45s var(--ease),background .45s var(--ease)}
+.btn-ghost:hover{transform:translateY(-2px);border-color:rgba(28,79,214,.4);color:var(--accent-deep);box-shadow:var(--shadow-float)}
+.btn-ghost:hover .orb{transform:translate(2px,-1px) scale(1.06);background:var(--accent-soft)}
+.btn-text{color:var(--accent-deep);font-weight:700;font-size:.94rem;display:inline-flex;align-items:center;gap:8px}
+.btn-text .arr{transition:transform .4s var(--ease)}
+.btn-text:hover .arr{transform:translateX(5px)}
+
+/* thin icon default */
+.ico{stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* reveal — heavy fade-up with blur */
+.rv{opacity:0;transform:translateY(38px);filter:blur(10px);
+  transition:opacity .9s var(--ease-out),transform .9s var(--ease-out),filter .9s var(--ease-out);}
+.rv.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;filter:none;transition:none}
+  .marquee-track{animation:none!important}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+
+/* asset placeholder tag */
+.asset-tag{
+  position:absolute;top:14px;left:14px;z-index:3;
+  font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(13,24,48,.72);color:rgba(255,255,255,.92);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  padding:5px 11px;border-radius:999px;pointer-events:none;
+}
+
+/* ================= HERO ================= */
+.hero{position:relative;padding:216px 0 20px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;
+  background:
+    radial-gradient(1000px 560px at 84% -12%,rgba(28,79,214,.09),transparent 62%),
+    radial-gradient(760px 480px at -10% 46%,rgba(232,80,63,.05),transparent 58%),
+    linear-gradient(180deg,#fdfdfe 0%,var(--bg) 100%);}
+.hero-lines{position:absolute;inset:0;opacity:.5;
+  background-image:linear-gradient(rgba(18,49,136,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(18,49,136,.04) 1px,transparent 1px);
+  background-size:76px 76px;
+  -webkit-mask-image:radial-gradient(780px 520px at 58% 8%,#000 25%,transparent 75%);
+  mask-image:radial-gradient(780px 520px at 58% 8%,#000 25%,transparent 75%);}
+.hero .wrap{z-index:2}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.95);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  padding:8px 18px;border-radius:999px;font-size:.84rem;font-weight:600;color:var(--ink-2);
+  box-shadow:0 1px 2px rgba(18,49,136,.06),0 8px 24px rgba(18,49,136,.06);margin-bottom:38px;
+}
+.hero-badge b{color:var(--accent-deep);font-weight:800}
+.hero-badge .dot{width:6px;height:6px;border-radius:99px;background:#2fa76c;box-shadow:0 0 0 3px rgba(47,167,108,.15)}
+h1{font-size:clamp(3rem,7.2vw,5.9rem);font-weight:800;letter-spacing:-.05em;line-height:1.05;margin-bottom:32px}
+h1 .accent{color:var(--accent);position:relative;white-space:nowrap}
+h1 .accent::after{content:"";position:absolute;left:-.04em;right:-.04em;bottom:.03em;height:.16em;background:var(--accent-soft);z-index:-1;border-radius:6px}
+.hero-sub{font-size:clamp(1.05rem,1.6vw,1.26rem);color:var(--ink-2);max-width:32em;line-height:1.85;margin-bottom:48px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:64px}
+.hero-trust{display:flex;gap:32px;flex-wrap:wrap}
+.hero-trust .t{display:flex;align-items:center;gap:9px;font-size:.88rem;color:var(--ink-2);font-weight:600}
+.hero .st{opacity:0;transform:translateY(30px);filter:blur(8px);animation:heroIn 1s var(--ease-out) forwards}
+.hero .st:nth-child(1){animation-delay:.05s}
+.hero .st:nth-child(2){animation-delay:.16s}
+.hero .st:nth-child(3){animation-delay:.27s}
+.hero .st:nth-child(4){animation-delay:.38s}
+.hero .st:nth-child(5){animation-delay:.49s}
+@keyframes heroIn{to{opacity:1;transform:none;filter:none}}
+
+/* hero media marquee */
+.hero-media{padding:40px 0 0;position:relative;z-index:2}
+.marquee{overflow:hidden;position:relative;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.marquee-track{display:flex;gap:20px;width:max-content;animation:slide 46s linear infinite;padding:14px 0}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes slide{to{transform:translateX(-50%)}}
+.m-card{
+  position:relative;flex:none;width:300px;aspect-ratio:4/2.9;border-radius:1.4rem;overflow:hidden;
+  border:1px solid var(--shell-line);
+  box-shadow:0 2px 6px rgba(18,49,136,.06),0 18px 44px rgba(18,49,136,.10);
+}
+.m-card:nth-child(odd){transform:rotate(-1.2deg) translateY(6px)}
+.m-card:nth-child(even){transform:rotate(1deg) translateY(-4px)}
+.m-card img{width:100%;height:100%;object-fit:cover}
+.m-card .cap{position:absolute;left:14px;bottom:12px;z-index:2;font-size:.78rem;font-weight:700;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.m-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,24,48,.55))}
+
+/* ================= STATS ================= */
+.stats{padding:96px 0 60px}
+.stats-core{
+  background:linear-gradient(135deg,#101f4e 0%,#1a3fae 100%);color:#fff;
+  padding:68px 60px;display:grid;grid-template-columns:repeat(4,1fr);gap:44px;position:relative;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.14);
+}
+.stats-core::before{content:"";position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(620px 300px at 90% -30%,rgba(255,255,255,.14),transparent 60%);pointer-events:none}
+.stat{border-left:1px solid rgba(255,255,255,.14);padding-left:30px}
+.stat:first-child{border-left:none;padding-left:0}
+.stat .num{font-size:clamp(2.2rem,3.8vw,3.5rem);font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.08}
+.stat .num small{font-size:.48em;font-weight:700;margin-left:2px;color:rgba(255,255,255,.85)}
+.stat .lab{margin-top:12px;font-size:.92rem;color:rgba(255,255,255,.68);font-weight:500}
+
+/* awards strip */
+.awards{padding:30px 0 0}
+.awards-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.award{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:.8rem;font-weight:600;color:var(--ink-3);letter-spacing:.02em;
+  background:var(--surface);border:1px solid var(--shell-line);border-radius:14px;padding:13px 20px;
+  transition:color .4s var(--ease),border-color .4s var(--ease),transform .4s var(--ease);
+}
+.award:hover{color:var(--ink-2);border-color:rgba(28,79,214,.3);transform:translateY(-2px)}
+.awards-note{text-align:center;margin-top:18px;font-size:.78rem;color:var(--ink-3);letter-spacing:.04em}
+
+/* ================= COUNTRY TABS ================= */
+.cc{display:inline-grid;place-items:center;min-width:30px;height:21px;padding:0 7px;border-radius:7px;
+  background:var(--accent-soft);color:var(--accent-deep);font-size:.64rem;font-weight:800;letter-spacing:.1em;line-height:1}
+.tab[aria-selected="true"] .cc{background:rgba(255,255,255,.18);color:#fff}
+.cc-lg{display:inline-grid;place-items:center;min-width:52px;height:36px;padding:0 13px;border-radius:11px;
+  background:linear-gradient(135deg,var(--accent) 0%,var(--accent-deep) 100%);color:#fff;
+  font-size:.86rem;font-weight:800;letter-spacing:.12em;line-height:1;
+  box-shadow:0 2px 8px rgba(28,79,214,.3),inset 0 1px 1px rgba(255,255,255,.25)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:48px 0 32px}
+.tab{
+  font-size:.94rem;font-weight:700;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--shell-line);border-radius:999px;padding:11px 20px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:9px;
+  transition:all .4s var(--ease);
+}
+.tab:hover{border-color:rgba(28,79,214,.4);color:var(--accent-deep);transform:translateY(-1px);box-shadow:0 6px 18px rgba(18,49,136,.08)}
+.tab:active{transform:scale(.97)}
+.tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:0 8px 22px rgba(13,24,48,.24)}
+.panel-shell{display:none}
+.panel-shell.show{display:block;animation:panelIn .6s var(--ease-out)}
+@keyframes panelIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.panel{display:grid;grid-template-columns:1.02fr .98fr;min-height:430px}
+.panel-body{padding:58px 54px;display:flex;flex-direction:column}
+.panel-body .flag{margin-bottom:20px}
+.panel-body h3{font-size:1.72rem;font-weight:800;letter-spacing:-.025em;margin-bottom:5px}
+.panel-body .en{font-size:.72rem;color:var(--ink-3);font-weight:700;letter-spacing:.18em;margin-bottom:22px}
+.panel-body p{color:var(--ink-2);line-height:1.8;margin-bottom:30px;max-width:29em}
+.panel-links{display:flex;flex-direction:column;margin-top:auto}
+.panel-links a{display:flex;align-items:center;justify-content:space-between;
+  padding:15px 18px;border-radius:14px;font-weight:600;font-size:.96rem;color:var(--ink);
+  transition:background .35s var(--ease)}
+.panel-links a span.go{color:var(--ink-3);transition:transform .35s var(--ease),color .35s var(--ease)}
+.panel-links a:hover{background:var(--accent-soft)}
+.panel-links a:hover span.go{transform:translateX(5px);color:var(--accent-deep)}
+.panel-links a + a{border-top:1px solid rgba(14,26,51,.05)}
+.panel-img{position:relative;min-height:320px}
+.panel-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.panel-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.22),transparent 32%)}
+
+/* ================= DIAGNOSIS BENTO ================= */
+.diag{background:linear-gradient(180deg,var(--bg) 0%,#edf1f9 52%,var(--bg) 100%)}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:56px}
+.b-au{grid-column:span 5}
+.b-uk{grid-column:span 4}
+.b-ca{grid-column:span 3}
+.b-map{grid-column:span 12}
+.diag-card .core{padding:38px 34px;display:flex;flex-direction:column;position:relative}
+.diag-card .tag{position:absolute;top:30px;right:30px;font-size:.62rem;font-weight:800;letter-spacing:.16em;color:var(--ink-3)}
+.diag-card .flag{margin-bottom:20px}
+.diag-card h3{font-size:1.3rem;font-weight:800;letter-spacing:-.015em;margin-bottom:10px}
+.diag-card p{font-size:.93rem;color:var(--ink-2);line-height:1.75;margin-bottom:28px}
+.diag-card .btn-text{margin-top:auto}
+.map-core{
+  background:linear-gradient(120deg,#0d1830 0%,#152a63 100%);color:#fff;
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px;padding:44px 48px;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.1);
+}
+.map-core h3{font-size:1.28rem;font-weight:800;margin-bottom:8px}
+.map-core p{color:rgba(255,255,255,.68);font-size:.94rem;max-width:44em}
+.map-core .btn{background:#fff;color:var(--ink);font-size:.92rem;gap:12px;padding:7px 7px 7px 22px;white-space:nowrap}
+.map-core .btn .orb{width:34px;height:34px;border-radius:99px;background:rgba(13,24,48,.08);display:grid;place-items:center;transition:transform .4s var(--ease)}
+.map-core .btn:hover{background:var(--accent-soft);transform:translateY(-2px)}
+.map-core .btn:hover .orb{transform:translate(2px,-1px)}
+.diag-note{margin-top:24px;font-size:.85rem;color:var(--ink-3);display:flex;align-items:center;gap:8px}
+
+/* ================= TIMELINE ================= */
+.tl{position:relative;margin-top:72px;padding-left:48px}
+.tl::before{content:"";position:absolute;left:17px;top:8px;bottom:8px;width:1.5px;background:var(--shell-line);border-radius:2px}
+.tl-progress{position:absolute;left:17px;top:8px;width:1.5px;background:linear-gradient(180deg,var(--accent),var(--accent-deep));border-radius:2px;height:0}
+.tl-item{position:relative;padding:0 0 56px 30px;max-width:640px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:-48px;top:0;width:36px;height:36px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--shell-line);display:grid;place-items:center;
+  font-size:.78rem;font-weight:800;color:var(--ink-3);
+  box-shadow:0 1px 2px rgba(18,49,136,.05);
+  transition:all .6s var(--ease)}
+.tl-item.in .tl-dot{border-color:rgba(28,79,214,.5);color:var(--accent-deep);background:var(--accent-soft);
+  box-shadow:0 0 0 7px rgba(28,79,214,.08),0 2px 8px rgba(28,79,214,.15)}
+.tl-item h3{font-size:1.2rem;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tl-item .badge{font-size:.64rem;font-weight:800;letter-spacing:.1em;background:var(--accent-soft);color:var(--accent-deep);border-radius:7px;padding:4px 10px}
+.tl-item p{color:var(--ink-2);font-size:.96rem;line-height:1.75}
+
+/* ================= NEWS ================= */
+.news-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.news-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:18px;margin-top:52px}
+.news-a{grid-row:span 2}
+.news-a .core{display:flex;flex-direction:column}
+.news-a .img{aspect-ratio:16/8.2;overflow:hidden;position:relative}
+.news-a .img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.news-a:hover .img img{transform:scale(1.045)}
+.news-body{padding:30px 34px 34px;display:flex;flex-direction:column;flex:1}
+.news-meta{display:flex;gap:10px;align-items:center;font-size:.76rem;color:var(--ink-3);font-weight:600;margin-bottom:13px}
+.news-meta .cat{color:var(--accent-deep);background:var(--accent-soft);padding:4px 11px;border-radius:7px;font-weight:700;letter-spacing:.02em}
+.news-a h3{font-size:1.3rem;font-weight:800;letter-spacing:-.015em;line-height:1.4;margin-bottom:10px}
+.news-a .news-body p{color:var(--ink-2);font-size:.95rem;line-height:1.7}
+.news-b .core{padding:28px 32px;display:flex;flex-direction:column}
+.news-b h3{font-size:1.06rem;font-weight:700;line-height:1.45;margin-bottom:8px;letter-spacing:-.01em}
+.news-b p{color:var(--ink-2);font-size:.9rem;line-height:1.65}
+
+/* ================= REVIEWS ================= */
+.reviews{background:linear-gradient(180deg,var(--bg),#edf1f9 60%,var(--bg))}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px;align-items:start}
+.rev:nth-child(2){margin-top:40px}
+.rev:nth-child(3){margin-top:80px}
+.rev .core{padding:36px 34px}
+.rev .q{font-size:2rem;color:var(--accent);line-height:1;font-weight:800;margin-bottom:16px;font-family:Georgia,serif}
+.rev h3{font-size:1.04rem;font-weight:800;margin-bottom:10px;letter-spacing:-.01em}
+.rev p{font-size:.93rem;color:var(--ink-2);line-height:1.8;margin-bottom:22px}
+.rev .who{display:flex;align-items:center;gap:12px;font-size:.84rem;color:var(--ink-3);font-weight:600}
+.rev .avatar{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;font-weight:800;color:#fff;font-size:.88rem;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.3)}
+
+/* ================= CENTERS ================= */
+.centers-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:52px;margin-top:56px;align-items:start}
+.center-shell{position:sticky;top:110px}
+.center-feature{padding:42px 40px}
+.center-feature .pin{width:46px;height:46px;border-radius:16px;background:var(--accent-soft);display:grid;place-items:center;margin-bottom:22px;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.8)}
+.center-feature h3{font-size:1.4rem;font-weight:800;margin-bottom:4px;letter-spacing:-.015em}
+.center-feature .sub{font-size:.72rem;color:var(--ink-3);font-weight:700;letter-spacing:.16em;margin-bottom:26px}
+.center-feature dl{display:grid;gap:16px;font-size:.95rem}
+.center-feature dt{font-weight:700;color:var(--ink-3);font-size:.74rem;letter-spacing:.08em;margin-bottom:3px}
+.center-feature dd{color:var(--ink-2);line-height:1.6}
+.center-feature .tel{font-size:1.5rem;font-weight:800;color:var(--accent-deep);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{font-size:.92rem;font-weight:600;color:var(--ink-2);cursor:pointer;
+  background:var(--surface);border:1px solid var(--shell-line);border-radius:13px;padding:12px 19px;
+  transition:all .35s var(--ease)}
+.chip:hover{border-color:rgba(28,79,214,.4);color:var(--accent-deep);transform:translateY(-1px);box-shadow:0 6px 16px rgba(18,49,136,.08)}
+.chip:active{transform:scale(.97)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(28,79,214,.32)}
+.centers-note{margin-top:26px;font-size:.88rem;color:var(--ink-3)}
+
+/* ================= FINAL CTA ================= */
+.final{padding:130px 0 150px}
+.final-core{
+  background:linear-gradient(135deg,#101f4e,#1a3fae 68%,#2a5cd6);color:#fff;
+  padding:92px 60px;text-align:center;position:relative;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.12);
+}
+.final-core::before{content:"";position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(680px 340px at 50% -32%,rgba(255,255,255,.16),transparent 64%);pointer-events:none}
+.final-core h2{font-size:clamp(2.1rem,4.4vw,3.4rem);font-weight:800;letter-spacing:-.04em;line-height:1.16;margin-bottom:18px;position:relative}
+.final-core > p{color:rgba(255,255,255,.76);font-size:1.06rem;max-width:33em;margin:0 auto 44px;position:relative}
+.final-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-white{background:#fff;color:var(--accent-deep);font-size:1rem;gap:14px;padding:8px 8px 8px 28px;
+  box-shadow:0 10px 32px rgba(0,0,0,.28)}
+.btn-white .orb{width:40px;height:40px;border-radius:99px;background:var(--accent-soft);display:grid;place-items:center;
+  transition:transform .45s var(--ease)}
+.btn-white:hover{background:var(--accent-soft);transform:translateY(-2px)}
+.btn-white:hover .orb{transform:translate(2px,-1px) scale(1.05)}
+.btn-kakao{background:var(--kakao);color:#191600;font-size:1rem;gap:12px;padding:15px 30px;font-weight:800;
+  box-shadow:0 8px 26px rgba(0,0,0,.22)}
+.btn-kakao:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,0,0,.28)}
+.tel-line{margin-top:28px;font-size:.94rem;color:rgba(255,255,255,.66);position:relative}
+.tel-line b{color:#fff;font-size:1.14rem;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+
+/* ================= FOOTER ================= */
+footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:var(--surface)}
+.foot{display:flex;justify-content:space-between;gap:44px;flex-wrap:wrap}
+.foot-brand{max-width:330px}
+.foot-brand img{height:22px;width:auto;mix-blend-mode:multiply;margin-bottom:18px}
+.foot-brand p{font-size:.85rem;color:var(--ink-3);line-height:1.75}
+.foot .col h4{font-size:.7rem;font-weight:800;letter-spacing:.16em;color:var(--ink-3);margin-bottom:16px;text-transform:uppercase}
+.foot .col a{display:block;font-size:.92rem;color:var(--ink-2);padding:4px 0;transition:color .3s}
+.foot .col a:hover{color:var(--accent-deep)}
+.foot-legal{margin-top:48px;padding-top:26px;border-top:1px solid rgba(14,26,51,.05);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.82rem;color:var(--ink-3)}
+.foot-legal a{font-weight:600;margin-right:18px}
+.foot-legal a:hover{color:var(--accent-deep)}
+
+/* ================= STICKY CONSULT BAR ================= */
+.consult-bar{
+  position:fixed;left:50%;bottom:22px;transform:translate(-50%,150%);z-index:var(--z-bar);
+  display:flex;align-items:center;gap:5px;padding:7px;
+  background:rgba(13,24,48,.85);
+  -webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);
+  border:1px solid rgba(255,255,255,.12);border-radius:999px;
+  box-shadow:0 20px 56px rgba(13,24,48,.42),inset 0 1px 1px rgba(255,255,255,.1);
+  transition:transform .65s var(--ease);
+  padding-bottom:calc(7px + env(safe-area-inset-bottom,0));
+}
+.consult-bar.show{transform:translate(-50%,0)}
+.cb-label{color:rgba(255,255,255,.82);font-size:.86rem;font-weight:600;padding:0 12px 0 18px;white-space:nowrap}
+.cb-tel{display:flex;align-items:center;gap:8px;color:#fff;font-weight:800;font-size:.94rem;white-space:nowrap;
+  padding:11px 16px;border-radius:999px;font-variant-numeric:tabular-nums;
+  transition:background .3s var(--ease)}
+.cb-tel:hover{background:rgba(255,255,255,.1)}
+.cb-kakao{display:grid;place-items:center;width:40px;height:40px;border-radius:999px;background:var(--kakao);flex:none;
+  transition:transform .3s var(--ease)}
+.cb-kakao:hover{transform:translateY(-1px) scale(1.05)}
+.cb-book{background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:999px;white-space:nowrap;
+  transition:background .3s var(--ease),transform .3s var(--ease)}
+.cb-book:hover{background:#2d63e8;transform:translateY(-1px)}
+.cb-book:active{transform:scale(.97)}
+.cb-close{background:none;border:none;color:rgba(255,255,255,.5);cursor:pointer;font-size:1rem;
+  width:34px;height:34px;border-radius:999px;display:grid;place-items:center;transition:all .3s}
+.cb-close:hover{color:#fff;background:rgba(255,255,255,.12)}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1080px){
+  .island nav,.island .nav-cta{display:none}
+  .burger{display:block}
+  .island{left:16px;right:16px;transform:none;max-width:none;justify-content:space-between;padding:8px 8px 8px 20px}
+  .b-au,.b-uk{grid-column:span 6}
+  .b-ca{grid-column:span 12}
+  .stats-core{grid-template-columns:repeat(2,1fr);padding:52px 44px}
+  .stat{border-left:none;padding-left:0}
+  .panel{grid-template-columns:1fr}
+  .panel-img{min-height:250px;order:-1}
+  .news-grid{grid-template-columns:1fr}
+  .news-a{grid-row:auto}
+  .rev-grid{grid-template-columns:1fr}
+  .rev:nth-child(2),.rev:nth-child(3){margin-top:0}
+  .centers-grid{grid-template-columns:1fr}
+  .center-shell{position:static}
+}
+@media (max-width:768px){
+  section{padding:84px 0}
+  .hero{padding:150px 0 10px}
+  .wrap{padding:0 18px}
+  .b-au,.b-uk,.b-ca,.b-map{grid-column:span 12}
+  .stats-core{grid-template-columns:1fr 1fr;gap:30px;padding:42px 28px}
+  .panel-body{padding:38px 28px}
+  .final-core{padding:66px 26px}
+  .map-core{grid-template-columns:1fr;padding:36px 30px}
+  .cb-label{display:none}
+  .hero-ctas .btn{width:100%;justify-content:space-between}
+  .m-card{width:230px}
+  h1 .accent::after{height:.13em}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ FLUID ISLAND NAV ============ -->
+<div class="island" id="island">
+  <a class="brand" href="#" aria-label="유학네트 홈">
+    <img src="https://images.ibseduhouse.net/iaeweb_2017/assets/img/common/logo.png" alt="유학네트 — 꿈을 디자인하라" />
+  </a>
+  <nav aria-label="주요 메뉴">
+    <a href="#countries">국가별 유학</a>
+    <a href="#diagnosis">AI 자가진단</a>
+    <a href="#process">유학 절차</a>
+    <a href="#news">학교소식</a>
+    <a href="#reviews">고객후기</a>
+    <a href="#centers">전국센터</a>
+  </nav>
+  <a class="nav-cta" href="#consult">상담 예약
+    <span class="orb"><svg width="13" height="13" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+  </a>
+  <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span>
+  </button>
+</div>
+
+<!-- fullscreen menu (mobile) -->
+<div class="menu" id="menu" aria-hidden="true">
+  <a href="#countries">국가별 유학</a>
+  <a href="#diagnosis">AI 자가진단</a>
+  <a href="#process">유학 절차</a>
+  <a href="#news">학교소식</a>
+  <a href="#reviews">고객후기</a>
+  <a href="#centers">전국센터</a>
+  <div class="menu-foot">대표상담전화 1588-1377 · 평일 09:30 – 18:30</div>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="소개">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-lines" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="st hero-badge"><span class="dot" aria-hidden="true"></span>공식 인증 전문 유학 기업&ensp;·&ensp;<b>iTEF 유학박람회 8/22 – 8/29</b></div>
+    <h1 class="st">34년의 노하우로,<br /><span class="accent">당신의 유학</span>을 설계합니다</h1>
+    <p class="st hero-sub">첫 상담에서 출국 후 현지 케어까지. 미국·캐나다·영국·호주·뉴질랜드·필리핀·유럽 7개 지역, 전국 18개 센터의 에듀플래너가 함께합니다.</p>
+    <div class="st hero-ctas">
+      <a class="btn btn-primary" href="#consult">1:1 상담 예약하기
+        <span class="orb"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+      </a>
+      <a class="btn btn-ghost" href="#diagnosis">3분 AI 자가진단
+        <span class="orb"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+    <div class="st hero-trust">
+      <div class="t"><svg width="17" height="17" viewBox="0 0 24 24" class="ico" style="color:#2fa76c" aria-hidden="true"><path d="M9 12.5l2 2 4.5-5.5"/><circle cx="12" cy="12" r="9.2"/></svg>공식 인증 유학 기업</div>
+      <div class="t"><svg width="17" height="17" viewBox="0 0 24 24" class="ico" style="color:#2fa76c" aria-hidden="true"><path d="M9 12.5l2 2 4.5-5.5"/><circle cx="12" cy="12" r="9.2"/></svg>스마트 안심유학 시스템</div>
+      <div class="t"><svg width="17" height="17" viewBox="0 0 24 24" class="ico" style="color:#2fa76c" aria-hidden="true"><path d="M9 12.5l2 2 4.5-5.5"/><circle cx="12" cy="12" r="9.2"/></svg>대표상담 1588-1377</div>
+    </div>
+  </div>
+
+  <!-- hero media marquee : 실제 학생·캠퍼스 사진 교체 자리 -->
+  <div class="hero-media st">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <div class="m-card"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/campus-walk/640/460" alt="" loading="lazy" /><span class="cap">영국 · 켄트대학교</span></div>
+        <div class="m-card"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/library-study/640/460" alt="" loading="lazy" /><span class="cap">캐나다 · 토론토 컬리지</span></div>
+        <div class="m-card"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/sydney-view/640/460" alt="" loading="lazy" /><span class="cap">호주 · 시드니</span></div>
+        <div class="m-card"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/grad-day/640/460" alt="" loading="lazy" /><span class="cap">유학네트 수속 학생</span></div>
+        <div class="m-card"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/fair-hall/640/460" alt="" loading="lazy" /><span class="cap">iTEF 유학박람회 현장</span></div>
+        <div class="m-card"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/malta-coast/640/460" alt="" loading="lazy" /><span class="cap">몰타 어학연수</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats" aria-label="숫자로 보는 유학네트">
+  <div class="wrap">
+    <div class="shell static rv" id="statsBox">
+      <div class="core stats-core">
+        <div class="stat"><div class="num"><span data-count="34">0</span><small>년</small></div><div class="lab">유학 컨설팅 업력</div></div>
+        <div class="stat"><div class="num"><span data-count="18">0</span><small>개</small></div><div class="lab">전국 유학센터</div></div>
+        <div class="stat"><div class="num"><span data-count="137482">0</span><small>+</small></div><div class="lab">누적 수속 학생</div></div>
+        <div class="stat"><div class="num"><span data-count="1240">0</span><small>+</small></div><div class="lab">제휴 교육기관</div></div>
+      </div>
+    </div>
+
+    <!-- awards strip : 실제 수상·인증 로고 교체 자리 -->
+    <div class="awards rv">
+      <div class="awards-row">
+        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>공식 인증 유학 기업</span>
+        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>34th Anniversary</span>
+        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>수상 이력 로고 자리</span>
+        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>협회 멤버십 로고 자리</span>
+        <span class="award"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg>언론 보도 로고 자리</span>
+      </div>
+      <p class="awards-note">* 수상·인증·멤버십 로고를 전달해 주시면 이 자리에 로고 스트립으로 배치됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COUNTRIES ============ -->
+<section id="countries" aria-label="국가별 유학">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Global Network</span>
+      <h2 class="sec">어디로 떠나든,<br />그 나라의 전문가가 있습니다</h2>
+      <p class="sec-sub">거대한 메뉴를 뒤질 필요 없이, 관심 국가를 선택하면 어학연수·대학 진학·장학금 정보를 바로 확인할 수 있습니다.</p>
+    </div>
+
+    <div class="tabs rv" role="tablist" aria-label="국가 선택">
+      <button class="tab" role="tab" aria-selected="true" data-panel="us"><span class="cc">US</span>미국</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="ca"><span class="cc">CA</span>캐나다</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="uk"><span class="cc">UK</span>영국</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="au"><span class="cc">AU</span>호주</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="nz"><span class="cc">NZ</span>뉴질랜드</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="ph"><span class="cc">PH</span>필리핀</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="eu"><span class="cc">EU</span>유럽</button>
+    </div>
+
+    <div class="panel-shell shell static show" id="p-us" role="tabpanel">
+      <div class="core"><div class="panel">
+        <div class="panel-body">
+          <div class="flag"><span class="cc-lg">USA</span></div>
+          <h3>미국</h3><div class="en">UNITED STATES</div>
+          <p>세계 TOP 100 대학 진학의 관문. 내신 성적이 부족해도 패스웨이 프로그램으로 명문대 입학을 설계할 수 있습니다.</p>
+          <div class="panel-links">
+            <a href="https://www.eduhouse.net/school/school_list.asp?natCd=1">어학연수 추천학교 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/pathway.asp?natCd=1">해외대학 패스웨이 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/scholarship/language/?natcd=1">장학금 프로그램 <span class="go">→</span></a>
+          </div>
+        </div>
+        <div class="panel-img"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/nyc-campus/900/720" alt="미국 대학 캠퍼스" loading="lazy" /></div>
+      </div></div>
+    </div>
+
+    <div class="panel-shell shell static" id="p-ca" role="tabpanel">
+      <div class="core"><div class="panel">
+        <div class="panel-body">
+          <div class="flag"><span class="cc-lg">CAN</span></div>
+          <h3>캐나다</h3><div class="en">CANADA</div>
+          <p>컬리지 졸업 후 취업비자(PGWP)까지 이어지는 실용 유학의 대표 국가. 코업(Co-op) 프로그램으로 일 경험도 함께.</p>
+          <div class="panel-links">
+            <a href="https://www.eduhouse.net/school/school_list.asp?natCd=3">어학연수 추천학교 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/pathway.asp?natCd=3">해외대학 패스웨이 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/scholarship/language/?natcd=3">장학금 프로그램 <span class="go">→</span></a>
+          </div>
+        </div>
+        <div class="panel-img"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/toronto-fall/900/720" alt="캐나다 캠퍼스 풍경" loading="lazy" /></div>
+      </div></div>
+    </div>
+
+    <div class="panel-shell shell static" id="p-uk" role="tabpanel">
+      <div class="core"><div class="panel">
+        <div class="panel-body">
+          <div class="flag"><span class="cc-lg">UK</span></div>
+          <h3>영국</h3><div class="en">UNITED KINGDOM</div>
+          <p>파운데이션 1년으로 세계 랭킹 상위 대학에 진학하는 가장 빠른 경로. 켄트대 등 명문대 장학금 기회도 풍부합니다.</p>
+          <div class="panel-links">
+            <a href="https://www.eduhouse.net/school/school_list.asp?natCd=2">어학연수 추천학교 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/pathway.asp?natCd=2">해외대학 패스웨이 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/scholarship/language/?natcd=2">장학금 프로그램 <span class="go">→</span></a>
+          </div>
+        </div>
+        <div class="panel-img"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/london-uni/900/720" alt="영국 대학 건물" loading="lazy" /></div>
+      </div></div>
+    </div>
+
+    <div class="panel-shell shell static" id="p-au" role="tabpanel">
+      <div class="core"><div class="panel">
+        <div class="panel-body">
+          <div class="flag"><span class="cc-lg">AUS</span></div>
+          <h3>호주</h3><div class="en">AUSTRALIA</div>
+          <p>학업과 아르바이트를 병행할 수 있는 나라. 학생비자 근로 조건과 최저임금 기준까지 출국 전에 정확히 안내합니다.</p>
+          <div class="panel-links">
+            <a href="https://www.eduhouse.net/school/school_list.asp?natCd=4">어학연수 추천학교 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/pathway.asp?natCd=4">해외대학 패스웨이 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/scholarship/language/?natcd=4">장학금 프로그램 <span class="go">→</span></a>
+          </div>
+        </div>
+        <div class="panel-img"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/sydney-harbour/900/720" alt="호주 시드니 전경" loading="lazy" /></div>
+      </div></div>
+    </div>
+
+    <div class="panel-shell shell static" id="p-nz" role="tabpanel">
+      <div class="core"><div class="panel">
+        <div class="panel-body">
+          <div class="flag"><span class="cc-lg">NZ</span></div>
+          <h3>뉴질랜드</h3><div class="en">NEW ZEALAND</div>
+          <p>안전한 환경과 합리적인 비용. 소도시 중심의 몰입형 영어 환경으로 첫 유학지로 꾸준히 선택받는 국가입니다.</p>
+          <div class="panel-links">
+            <a href="https://www.eduhouse.net/school/school_list.asp?natCd=5">어학연수 추천학교 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/pathway.asp?natCd=5">해외대학 패스웨이 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/scholarship/language/?natcd=5">장학금 프로그램 <span class="go">→</span></a>
+          </div>
+        </div>
+        <div class="panel-img"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/nz-lake/900/720" alt="뉴질랜드 자연 풍경" loading="lazy" /></div>
+      </div></div>
+    </div>
+
+    <div class="panel-shell shell static" id="p-ph" role="tabpanel">
+      <div class="core"><div class="panel">
+        <div class="panel-body">
+          <div class="flag"><span class="cc-lg">PH</span></div>
+          <h3>필리핀</h3><div class="en">PHILIPPINES</div>
+          <p>1:1 집중 수업으로 단기간 영어 실력을 끌어올리는 스파르타 연수의 본고장. 영미권 연수 전 징검다리로도 좋습니다.</p>
+          <div class="panel-links">
+            <a href="https://www.eduhouse.net/school/school_list.asp?natCd=1453">어학연수 추천학교 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/language_info.asp?natCd=1453">어학연수 정보 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/scholarship/language/?natcd=1453">장학금 프로그램 <span class="go">→</span></a>
+          </div>
+        </div>
+        <div class="panel-img"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/cebu-beach/900/720" alt="필리핀 세부 해변" loading="lazy" /></div>
+      </div></div>
+    </div>
+
+    <div class="panel-shell shell static" id="p-eu" role="tabpanel">
+      <div class="core"><div class="panel">
+        <div class="panel-body">
+          <div class="flag"><span class="cc-lg">EU</span></div>
+          <h3>유럽</h3><div class="en">IRELAND · MALTA · SPAIN · FRANCE · GERMANY +</div>
+          <p>아일랜드 워킹홀리데이부터 몰타 휴양 연수까지. 7개 유럽 국가의 현지 리포터가 실시간 소식을 전합니다.</p>
+          <div class="panel-links">
+            <a href="https://www.eduhouse.net/school/school_list.asp?natCd=574">아일랜드 추천학교 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/school/school_list.asp?natCd=591">몰타 추천학교 <span class="go">→</span></a>
+            <a href="https://www.eduhouse.net/talk/live_talk_list.asp?natCd=574,591,1260,1309,1447,584,1308">유럽 리포터 소식 <span class="go">→</span></a>
+          </div>
+        </div>
+        <div class="panel-img"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/malta-valletta/900/720" alt="몰타 발레타 거리" loading="lazy" /></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIAGNOSIS BENTO ============ -->
+<section id="diagnosis" class="diag" aria-label="AI 자가진단">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">3-Minute Diagnosis</span>
+      <h2 class="sec">유학, 진단에서 시작하세요</h2>
+      <p class="sec-sub">국가별 3분 진단으로 내 조건에 맞는 진학 경로를 먼저 확인하고, 그 결과 그대로 에듀플래너 상담으로 이어가세요. 상담 시간이 짧아지고, 대화는 깊어집니다.</p>
+    </div>
+
+    <div class="bento">
+      <a class="shell diag-card b-au rv" href="https://jaebong-choi.github.io/studyabroad-au-ai/" target="_blank" rel="noopener">
+        <div class="core">
+          <span class="tag">AU STUDY GUIDE</span>
+          <div class="flag"><span class="cc-lg">AUS</span></div>
+          <h3>호주 진학 진단</h3>
+          <p>학부 디플로마·파운데이션부터 석사(GE)까지, 2026년 공식 학비 데이터 기반으로 나에게 맞는 경로를 진단합니다.</p>
+          <span class="btn-text">진단 시작하기 <span class="arr">→</span></span>
+        </div>
+      </a>
+      <a class="shell diag-card b-uk rv" href="https://jaebong-choi.github.io/uk-study-guide/" target="_blank" rel="noopener" style="transition-delay:.08s">
+        <div class="core">
+          <span class="tag">UK STUDY GUIDE</span>
+          <div class="flag"><span class="cc-lg">UK</span></div>
+          <h3>영국 진학 진단</h3>
+          <p>파운데이션·IYO부터 프리마스터까지, QS 2027 랭킹 데이터를 반영해 지원 가능한 대학 범위를 확인합니다.</p>
+          <span class="btn-text">진단 시작하기 <span class="arr">→</span></span>
+        </div>
+      </a>
+      <a class="shell diag-card b-ca rv" href="https://jaebong-choi.github.io/ca-study-guide/" target="_blank" rel="noopener" style="transition-delay:.16s">
+        <div class="core">
+          <span class="tag">CA STUDY GUIDE</span>
+          <div class="flag"><span class="cc-lg">CAN</span></div>
+          <h3>캐나다 컬리지 진단</h3>
+          <p>2026년 IRCC 정책 기준 PGWP 가능 전공과 편입 경로를 진단합니다.</p>
+          <span class="btn-text">진단 시작하기 <span class="arr">→</span></span>
+        </div>
+      </a>
+      <a class="shell b-map rv" href="https://jaebong-choi.github.io/esl-study-map/" target="_blank" rel="noopener">
+        <div class="core map-core">
+          <div>
+            <h3>어학연수 스터디 맵</h3>
+            <p>6개국 어학교를 지도에서 한눈에. 도시·학교·기숙사 위치를 직접 비교하며 연수지를 골라보세요.</p>
+          </div>
+          <span class="btn">지도 열어보기
+            <span class="orb"><svg width="14" height="14" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </span>
+        </div>
+      </a>
+    </div>
+    <p class="diag-note rv">진단 결과 화면에서 바로 1:1 상담 예약으로 연결됩니다 — 결과지를 들고 오시면 상담이 훨씬 빨라집니다.</p>
+  </div>
+</section>
+
+<!-- ============ PROCESS TIMELINE ============ -->
+<section id="process" aria-label="유학 절차">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Smart Care System</span>
+      <h2 class="sec">상담부터 현지 케어까지,<br />여섯 단계로 끝나는 유학 준비</h2>
+      <p class="sec-sub">34년간 다듬어 온 수속 프로세스입니다. 각 단계마다 담당 에듀플래너가 진행 상황을 직접 알려드립니다.</p>
+    </div>
+
+    <div class="tl" id="timeline">
+      <div class="tl-progress" id="tlProgress" aria-hidden="true"></div>
+      <div class="tl-item rv"><div class="tl-dot">1</div>
+        <h3>무료 상담 · 진단</h3>
+        <p>3분 AI 자가진단 결과 또는 전화·방문 상담으로 시작합니다. 성적, 예산, 목표를 함께 정리합니다.</p></div>
+      <div class="tl-item rv"><div class="tl-dot">2</div>
+        <h3>학교 선정 <span class="badge">맞춤 설계</span></h3>
+        <p>국가별 전문 플래너가 조건에 맞는 학교 3~5곳을 비교 제안합니다. 장학금 가능 여부도 이 단계에서 확인합니다.</p></div>
+      <div class="tl-item rv"><div class="tl-dot">3</div>
+        <h3>입학 수속</h3>
+        <p>지원 서류 준비부터 합격 통지까지 전 과정을 대행합니다. 진행 상황은 문자와 전화로 안내됩니다.</p></div>
+      <div class="tl-item rv"><div class="tl-dot">4</div>
+        <h3>비자 · 출국 준비</h3>
+        <p>비자 신청, 항공권, 숙소, 보험까지 출국 체크리스트를 함께 완성합니다. 출국 전 오리엔테이션을 진행합니다.</p></div>
+      <div class="tl-item rv"><div class="tl-dot">5</div>
+        <h3>출국 · 현지 정착</h3>
+        <p>도착 후 픽업과 입학 첫 주 적응까지, 해외 네트워크 오피스가 현지에서 이어받습니다.</p></div>
+      <div class="tl-item rv"><div class="tl-dot">6</div>
+        <h3>안심 케어 <span class="badge">CALL · ACS 서비스</span></h3>
+        <p>유학 기간 내내 정기 콜 서비스와 긴급 지원 채널을 운영합니다. 학부모님께도 정기 리포트를 드립니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWS ============ -->
+<section id="news" aria-label="학교소식" style="padding-top:36px">
+  <div class="wrap">
+    <div class="rv news-head">
+      <div>
+        <span class="eyebrow">Weekly Briefing</span>
+        <h2 class="sec" style="margin-bottom:0">이번 주 놓치면 아까운 소식</h2>
+      </div>
+      <a class="btn-text" href="https://www.eduhouse.net/talk/talk_news_list.asp?natCd=1">전체 소식 보기 <span class="arr">→</span></a>
+    </div>
+
+    <div class="news-grid">
+      <a class="shell news-a rv" href="https://www.eduhouse.net/talk/talk_news_list.asp?natCd=1">
+        <div class="core">
+          <div class="img"><span class="asset-tag">사진 교체 자리</span><img src="https://picsum.photos/seed/study-promo/1200/640" alt="어학연수 프로모션" loading="lazy" /></div>
+          <div class="news-body">
+            <div class="news-meta"><span class="cat">프로모션</span><span>12월 첫째 주</span></div>
+            <h3>12월 첫째 주 어학연수 프로모션 총정리</h3>
+            <p>미국, 캐나다, 영국, 호주 등 어학연수를 최대 40%까지 할인받을 수 있는 기회. 국가별 마감 일정을 확인하세요.</p>
+          </div>
+        </div>
+      </a>
+      <a class="shell news-b rv" href="https://www.eduhouse.net/talk/talk_news_list.asp?natCd=2" style="transition-delay:.08s">
+        <div class="core">
+          <div class="news-meta"><span class="cat">영국</span><span>대학 유학</span></div>
+          <h3>켄트 대학교 입학조건 및 장학금 정리</h3>
+          <p>연구 중심 명문 University of Kent — 파운데이션 입학조건부터 장학금까지 한 번에.</p>
+        </div>
+      </a>
+      <a class="shell news-b rv" href="https://www.eduhouse.net/talk/talk_news_list.asp?natCd=4" style="transition-delay:.16s">
+        <div class="core">
+          <div class="news-meta"><span class="cat">호주</span><span>비자 · 생활</span></div>
+          <h3>호주 학생비자 아르바이트 시간과 최저임금</h3>
+          <p>워킹홀리데이·학생비자로 공부하며 일하면 시급은 얼마나 받을 수 있을까요? 최신 기준으로 정리했습니다.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews" class="reviews" aria-label="고객후기">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Real Stories</span>
+      <h2 class="sec">먼저 다녀온 사람들의 이야기</h2>
+      <p class="sec-sub">광고 문구보다 정확한 것은 실제 고객의 후기입니다. 홈페이지에 등록된 후기 원문 그대로 보여드립니다.</p>
+    </div>
+
+    <div class="rev-grid">
+      <article class="shell rev rv">
+        <div class="core">
+          <div class="q" aria-hidden="true">“</div>
+          <h3>청주센터 권이순 팀장님 감사합니다!</h3>
+          <p>어학연수를 처음 준비하다 보니 모르는 것투성이였는데, 지인이 추천해 준 유학네트에서 하나하나 짚어주셔서 안심하고 준비할 수 있었어요.</p>
+          <div class="who"><span class="avatar" style="background:#5b79c7">김</span>어학연수 준비생 · 청주센터</div>
+        </div>
+      </article>
+      <article class="shell rev rv" style="transition-delay:.08s">
+        <div class="core">
+          <div class="q" aria-hidden="true">“</div>
+          <h3>체계적이고 친절한 상담이었습니다</h3>
+          <p>캐나다 6개월 연수를 결정했는데, 플래너님이 제 학과 전공까지 고려해서 이 연수로 얻을 수 있는 것들을 구체적으로 설계해 주셨어요.</p>
+          <div class="who"><span class="avatar" style="background:#4a9d84">박</span>대학생 · 인천센터</div>
+        </div>
+      </article>
+      <article class="shell rev rv" style="transition-delay:.16s">
+        <div class="core">
+          <div class="q" aria-hidden="true">“</div>
+          <h3>정확하고 확실해서 선택했어요</h3>
+          <p>직장생활 8개월을 마치고 캐나다 코업을 준비 중입니다. 꼼꼼한 성격이라 유학원 고르는 데 까다로웠는데, 첫 상담부터 신뢰가 갔습니다.</p>
+          <div class="who"><span class="avatar" style="background:#b07a4e">이</span>직장인 · 인천센터</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CENTERS ============ -->
+<section id="centers" aria-label="전국 유학센터">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eyebrow">Nationwide</span>
+      <h2 class="sec">가까운 센터에서 만나요</h2>
+      <p class="sec-sub">서울부터 부산까지 전국 18개 센터. 센터명을 선택하면 위치와 연락처가 바로 표시됩니다.</p>
+    </div>
+
+    <div class="centers-grid">
+      <div class="center-shell rv">
+        <div class="shell static">
+          <div class="core center-feature" aria-live="polite">
+            <div class="pin" aria-hidden="true"><svg width="21" height="21" viewBox="0 0 24 24" class="ico" style="color:var(--accent)"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <h3 id="cf-name">강남센터</h3>
+            <div class="sub" id="cf-en">GANGNAM CENTER</div>
+            <dl>
+              <div><dt>주소</dt><dd id="cf-addr">서울특별시 강남구 테헤란로 4길 38-3, 다우빌딩 3층</dd></div>
+              <div><dt>오시는 길</dt><dd id="cf-way">신분당선 강남역 3, 4번 출구에서 도보 5분</dd></div>
+              <div><dt>전화</dt><dd class="tel" id="cf-tel">02-3481-1400</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="chips rv" id="centerChips"></div>
+        <p class="centers-note rv">* 제안용 예시 데이터입니다. 실제 적용 시 센터별 주소·연락처 DB와 연동됩니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final" id="consult" aria-label="상담 예약">
+  <div class="wrap">
+    <div class="shell static rv">
+      <div class="core final-core">
+        <h2>꿈을 디자인하라</h2>
+        <p>15년 이상 경력의 에듀플래너가 A부터 Z까지 한 번에 정리해 드립니다. 원하는 시간을 남겨주시면 저희가 먼저 전화드립니다.</p>
+        <div class="final-ctas">
+          <a class="btn btn-white" href="https://www.eduhouse.net/members/member_info_write.asp">1:1 상담 예약하기
+            <span class="orb"><svg width="15" height="15" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </a>
+          <a class="btn btn-kakao" href="https://pf.kakao.com/" target="_blank" rel="noopener">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="#191600" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 2.6 1.7 4.9 4.3 6.2l-.9 3.4c-.1.3.3.6.5.4l4-2.7c.4 0 .8.1 1.3.1 5.1 0 9.2-3.3 9.2-7.4S17.1 3 12 3Z"/></svg>
+            카톡 상담
+          </a>
+        </div>
+        <div class="tel-line">대표상담전화 <b>1588-1377</b> · 평일 09:30 – 18:30</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div class="foot-brand">
+      <img src="https://images.ibseduhouse.net/iaeweb_2017/assets/img/common/logo.png" alt="유학네트 — 꿈을 디자인하라" />
+      <p>공식 인증 전문 유학 기업 · Since 1992<br />서울특별시 강남구 테헤란로 4길 38-3<br />대표전화 1588-1377</p>
+    </div>
+    <div class="col">
+      <h4>Programs</h4>
+      <a href="https://www.eduhouse.net/school/school.asp">학교 찾기</a>
+      <a href="https://www.eduhouse.net/recommend/language/">추천 프로그램</a>
+      <a href="https://www.eduhouse.net/earlyuk/main.asp">초중고 유학</a>
+      <a href="http://fair.eduhouse.net/">유학박람회</a>
+    </div>
+    <div class="col">
+      <h4>Support</h4>
+      <a href="https://www.eduhouse.net/talk/talk_qna_list.asp">묻고 답하기</a>
+      <a href="https://www.eduhouse.net/members/guidebook_req.asp">무료 매거진 신청</a>
+      <a href="https://www.eduhouse.net/members/member_ansim.asp">스마트 안심유학</a>
+      <a href="https://www.eduhouse.net/members/customer_inquiry.asp">불편사항 접수</a>
+    </div>
+    <div class="col">
+      <h4>Company</h4>
+      <a href="http://ir.eduhouse.net/">회사소개</a>
+      <a href="https://www.eduhouse.net/members/awarded_certification.asp">수상 및 멤버십</a>
+      <a href="https://www.eduhouse.net/members/iae_in_branch_list.asp?grcd=528">국내 네트워크</a>
+      <a href="https://www.eduhouse.net/members/iae_out_branch_list.asp">해외 네트워크</a>
+    </div>
+  </div>
+  <div class="wrap foot-legal">
+    <div>
+      <a href="https://www.eduhouse.net/members/svc_agreement.asp">이용약관</a>
+      <a href="https://www.eduhouse.net/members/svc_agreement.asp"><b>개인정보처리방침</b></a>
+    </div>
+    <div>© 1992–2026 EDUHOUSE Co., Ltd. — 리디자인 시안 (제안용)</div>
+  </div>
+</footer>
+
+<!-- ============ STICKY CONSULT BAR ============ -->
+<div class="consult-bar" id="consultBar" role="complementary" aria-label="빠른 상담">
+  <span class="cb-label">유학 고민, 지금 바로</span>
+  <a class="cb-tel" href="tel:15881377"><svg width="14" height="14" viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.9.5 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>1588-1377</a>
+  <a class="cb-kakao" href="https://pf.kakao.com/" target="_blank" rel="noopener" aria-label="카카오톡 상담">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="#191600" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.4c0 2.6 1.7 4.9 4.3 6.2l-.9 3.4c-.1.3.3.6.5.4l4-2.7c.4 0 .8.1 1.3.1 5.1 0 9.2-3.3 9.2-7.4S17.1 3 12 3Z"/></svg>
+  </a>
+  <a class="cb-book" href="#consult">1:1 상담 예약</a>
+  <button class="cb-close" id="cbClose" aria-label="상담 바 닫기">✕</button>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- fullscreen menu ---- */
+  var burger = document.getElementById("burger");
+  var menu = document.getElementById("menu");
+  function toggleMenu(force){
+    var open = typeof force === "boolean" ? force : !menu.classList.contains("open");
+    menu.classList.toggle("open", open);
+    burger.classList.toggle("open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    menu.setAttribute("aria-hidden", String(!open));
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  burger.addEventListener("click", function(){ toggleMenu(); });
+  menu.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ toggleMenu(false); }); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") toggleMenu(false); });
+
+  /* ---- reveal on scroll ---- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, {threshold:.1, rootMargin:"0px 0px -60px 0px"});
+  document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+
+  /* ---- count-up stats ---- */
+  function animateCount(el){
+    var target = parseInt(el.dataset.count, 10);
+    if(reduced){ el.textContent = target.toLocaleString("ko-KR"); return; }
+    var t0 = null, dur = 1700;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased).toLocaleString("ko-KR");
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var statsIo = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.querySelectorAll("[data-count]").forEach(animateCount);
+        statsIo.unobserve(e.target);
+      }
+    });
+  }, {threshold:.35});
+  var sb = document.getElementById("statsBox");
+  if(sb) statsIo.observe(sb);
+
+  /* ---- marquee: duplicate track for seamless loop ---- */
+  var track = document.getElementById("marqueeTrack");
+  if(track){ track.innerHTML += track.innerHTML; }
+
+  /* ---- country tabs ---- */
+  var tabs = document.querySelectorAll(".tab");
+  tabs.forEach(function(tab){
+    tab.addEventListener("click", function(){
+      tabs.forEach(function(t){ t.setAttribute("aria-selected","false"); });
+      tab.setAttribute("aria-selected","true");
+      document.querySelectorAll(".panel-shell").forEach(function(p){ p.classList.remove("show"); });
+      var panel = document.getElementById("p-" + tab.dataset.panel);
+      if(panel) panel.classList.add("show");
+    });
+  });
+
+  /* ---- timeline: dot activation + progress (rAF-throttled) ---- */
+  var tl = document.getElementById("timeline");
+  var tlProgress = document.getElementById("tlProgress");
+  var tlItems = document.querySelectorAll(".tl-item");
+  var tlIo = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add("in"); });
+  }, {threshold:.5});
+  tlItems.forEach(function(i){ tlIo.observe(i); });
+  var tlTick = false;
+  function updateTl(){
+    tlTick = false;
+    if(!tl) return;
+    var rect = tl.getBoundingClientRect();
+    var vh = window.innerHeight;
+    var visible = Math.min(Math.max(vh * .65 - rect.top, 0), rect.height);
+    tlProgress.style.height = visible + "px";
+  }
+  window.addEventListener("scroll", function(){
+    if(!tlTick){ tlTick = true; requestAnimationFrame(updateTl); }
+  }, {passive:true});
+  updateTl();
+
+  /* ---- nav scroll-spy ---- */
+  var navLinks = document.querySelectorAll(".island nav a");
+  var spyMap = {};
+  navLinks.forEach(function(a){ spyMap[a.getAttribute("href").slice(1)] = a; });
+  var spyIo = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        navLinks.forEach(function(a){ a.classList.remove("active"); });
+        var link = spyMap[e.target.id];
+        if(link) link.classList.add("active");
+      }
+    });
+  }, {rootMargin:"-35% 0px -55% 0px"});
+  Object.keys(spyMap).forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) spyIo.observe(el);
+  });
+
+  /* ---- sticky consult bar (sentinel-based) ---- */
+  var bar = document.getElementById("consultBar");
+  var barClosed = false;
+  var pastHero = false, nearConsult = false;
+  function updateBar(){
+    if(barClosed) return;
+    bar.classList.toggle("show", pastHero && !nearConsult);
+  }
+  var heroEl = document.querySelector(".hero");
+  var heroIo = new IntersectionObserver(function(entries){
+    pastHero = !entries[0].isIntersecting;
+    updateBar();
+  }, {threshold:0});
+  if(heroEl) heroIo.observe(heroEl);
+  var consultEl = document.getElementById("consult");
+  var consultIo = new IntersectionObserver(function(entries){
+    nearConsult = entries[0].isIntersecting;
+    updateBar();
+  }, {threshold:.15});
+  if(consultEl) consultIo.observe(consultEl);
+  document.getElementById("cbClose").addEventListener("click", function(){
+    barClosed = true;
+    bar.classList.remove("show");
+  });
+
+  /* ---- centers data (제안용 예시) ---- */
+  var centers = [
+    {n:"강남센터", en:"GANGNAM CENTER", addr:"서울특별시 강남구 테헤란로 4길 38-3, 다우빌딩 3층", way:"신분당선 강남역 3, 4번 출구에서 도보 5분", tel:"02-3481-1400"},
+    {n:"종로센터", en:"JONGRO CENTER", addr:"서울특별시 종로구 삼일대로 · 예시 주소", way:"1호선 종각역 인근", tel:"02-2263-1400"},
+    {n:"분당센터", en:"BUNDANG CENTER", addr:"경기도 성남시 분당구 · 예시 주소", way:"수인분당선 서현역 인근", tel:"031-708-1400"},
+    {n:"수원센터", en:"SUWON CENTER", addr:"경기도 수원시 팔달구 · 예시 주소", way:"1호선 수원역 인근", tel:"031-241-1400"},
+    {n:"플러스센터", en:"PLUS CENTER", addr:"서울특별시 · 예시 주소", way:"방문 전 전화 예약", tel:"02-538-1400"},
+    {n:"인천센터", en:"INCHEON CENTER", addr:"인천광역시 남동구 · 예시 주소", way:"인천1호선 예술회관역 인근", tel:"032-437-1400"},
+    {n:"송도센터", en:"SONGDO CENTER", addr:"인천광역시 연수구 송도동 · 예시 주소", way:"인천1호선 센트럴파크역 인근", tel:"032-831-1400"},
+    {n:"스마트센터", en:"SMART CENTER", addr:"온라인 전용 · 화상 상담", way:"전국 어디서나 비대면 상담", tel:"1588-1377"},
+    {n:"일산센터", en:"ILSAN CENTER", addr:"경기도 고양시 일산동구 · 예시 주소", way:"3호선 정발산역 인근", tel:"031-905-1400"},
+    {n:"원주센터", en:"WONJU CENTER", addr:"강원특별자치도 원주시 · 예시 주소", way:"원주 시외버스터미널 인근", tel:"033-745-1400"},
+    {n:"청주센터", en:"CHEONGJU CENTER", addr:"충청북도 청주시 상당구 · 예시 주소", way:"성안길 입구 인근", tel:"043-223-1400"},
+    {n:"대전센터", en:"DAEJEON CENTER", addr:"대전광역시 서구 둔산동 · 예시 주소", way:"시청역 인근", tel:"042-483-1400"},
+    {n:"세종센터", en:"SEJONG CENTER", addr:"세종특별자치시 · 예시 주소", way:"정부세종청사 인근", tel:"044-865-1400"},
+    {n:"천안센터", en:"CHEONAN CENTER", addr:"충청남도 천안시 동남구 · 예시 주소", way:"1호선 천안역 인근", tel:"041-563-1400"},
+    {n:"전주센터", en:"JEONJU CENTER", addr:"전북특별자치도 전주시 완산구 · 예시 주소", way:"전북대 구정문 인근", tel:"063-255-1400"},
+    {n:"광주센터", en:"GWANGJU CENTER", addr:"광주광역시 동구 · 예시 주소", way:"금남로4가역 인근", tel:"062-227-1400"},
+    {n:"대구센터", en:"DAEGU CENTER", addr:"대구광역시 중구 동성로 · 예시 주소", way:"2호선 반월당역 인근", tel:"053-423-1400"},
+    {n:"부산센터", en:"BUSAN CENTER", addr:"부산광역시 부산진구 서면 · 예시 주소", way:"1·2호선 서면역 인근", tel:"051-808-1400"}
+  ];
+  var chipsWrap = document.getElementById("centerChips");
+  centers.forEach(function(c, i){
+    var b = document.createElement("button");
+    b.className = "chip" + (i === 0 ? " on" : "");
+    b.type = "button";
+    b.textContent = c.n;
+    b.addEventListener("click", function(){
+      chipsWrap.querySelectorAll(".chip").forEach(function(x){ x.classList.remove("on"); });
+      b.classList.add("on");
+      document.getElementById("cf-name").textContent = c.n;
+      document.getElementById("cf-en").textContent = c.en;
+      document.getElementById("cf-addr").textContent = c.addr;
+      document.getElementById("cf-way").textContent = c.way;
+      document.getElementById("cf-tel").textContent = c.tel;
+    });
+    chipsWrap.appendChild(b);
+  });
+})();
+</script>
+</body>
+</html>
