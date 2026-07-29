@@ -340,6 +340,9 @@ a.hero-badge:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgba(22,22,28
 .panel-links a:hover{background:var(--accent-soft)}
 .panel-links a:hover span.go{transform:translateX(5px);color:var(--accent-deep)}
 .panel-links a + a{border-top:1px solid rgba(33,33,41,.05)}
+/* 패널 안 강조 링크 — AI 진단 배너용 */
+.panel-links a.hot{color:var(--accent-deep);font-weight:800}
+.panel-links a.hot span.go{color:var(--accent-deep)}
 .panel-img{position:relative;min-height:320px}
 .panel-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
 .panel-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.22),transparent 32%)}
@@ -347,9 +350,11 @@ a.hero-badge:hover{transform:translateY(-1px);box-shadow:0 2px 4px rgba(22,22,28
 /* ================= DIAGNOSIS BENTO ================= */
 .diag{background:linear-gradient(180deg,var(--bg) 0%,#edf1f9 52%,var(--bg) 100%)}
 .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:56px}
-.b-au{grid-column:span 5}
-.b-uk{grid-column:span 4}
-.b-ca{grid-column:span 3}
+/* 진단 카드 4국 체제: 데스크톱 2×2 (각 6칸) + 지도 배너 전체 폭 */
+.b-au{grid-column:span 6}
+.b-uk{grid-column:span 6}
+.b-ca{grid-column:span 6}
+.b-us{grid-column:span 6}
 .b-map{grid-column:span 12}
 .diag-card .core{padding:38px 34px;display:flex;flex-direction:column;position:relative}
 .diag-card .tag{position:absolute;top:30px;right:30px;font-size:.62rem;font-weight:800;letter-spacing:.16em;color:var(--ink-3)}
@@ -603,8 +608,7 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
   .island nav,.island .nav-cta{display:none}
   .burger{display:block}
   .island{left:16px;right:16px;transform:none;max-width:none;justify-content:space-between;padding:8px 8px 8px 20px}
-  .b-au,.b-uk{grid-column:span 6}
-  .b-ca{grid-column:span 12}
+  .b-au,.b-uk,.b-ca,.b-us{grid-column:span 6}
   .stats-core{grid-template-columns:repeat(2,1fr);padding:52px 44px}
   .stat{border-left:none;padding-left:0}
   .panel{grid-template-columns:1fr}
@@ -620,7 +624,7 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
   section{padding:84px 0}
   .hero{padding:150px 0 10px}
   .wrap{padding:0 18px}
-  .b-au,.b-uk,.b-ca,.b-map{grid-column:span 12}
+  .b-au,.b-uk,.b-ca,.b-us,.b-map{grid-column:span 12}
   .stats-core{grid-template-columns:1fr 1fr;gap:30px;padding:42px 28px}
   .panel-body{padding:38px 28px}
   .final-core{padding:66px 26px}
@@ -767,6 +771,7 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
             <a href="https://www.eduhouse.net/school/school_list.asp?natCd=1">어학연수 추천학교 <span class="go">→</span></a>
             <a href="https://www.eduhouse.net/school/pathway.asp?natCd=1">해외대학 패스웨이 <span class="go">→</span></a>
             <a href="https://www.eduhouse.net/school/scholarship/language/?natcd=1">장학금 프로그램 <span class="go">→</span></a>
+            <a class="hot" href="https://jaebong-choi.github.io/us-study-guide/" target="_blank" rel="noopener">미국 진학 3분 AI 진단 <span class="go">→</span></a>
           </div>
         </div>
         <div class="panel-img"><img src="images/usa-nyc.jpg" alt="성조기와 뉴욕 맨해튼 전경" loading="lazy" /></div>
@@ -901,6 +906,14 @@ footer{border-top:1px solid var(--shell-line);padding:64px 0 130px;background:va
           <div class="flag"><span class="cc-lg">CAN</span></div>
           <h3>캐나다 컬리지 진단</h3>
           <p>2026년 IRCC 정책 기준 PGWP 가능 전공과 편입 경로를 진단합니다.</p>
+          <span class="btn-text">진단 시작하기 <span class="arr">→</span></span>
+        </div>
+      </a>
+      <a class="shell diag-card b-us rv" href="https://jaebong-choi.github.io/us-study-guide/" target="_blank" rel="noopener" style="transition-delay:.24s">
+        <div class="core">
+          <div class="flag"><span class="cc-lg">USA</span></div>
+          <h3>미국 진학 진단</h3>
+          <p>Direct 입학·패스웨이·2+2 편입 세 경로를 US News 2026 랭킹 데이터 기반으로 비교 진단합니다.</p>
           <span class="btn-text">진단 시작하기 <span class="arr">→</span></span>
         </div>
       </a>
